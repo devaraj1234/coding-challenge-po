@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class ProductOwned {
 
-	private int order_no;
+	private Integer order_no;
 	private Product product_owned;
 	private Customer product_owner;
 	private int owned_quantity;
@@ -13,8 +13,13 @@ public class ProductOwned {
 
 	public ProductOwned() {
 	}
+	
+	public ProductOwned(Integer order_no, Customer product_owner) {
+		this.order_no = order_no;
+		this.product_owner =product_owner;
+	}
 
-	public ProductOwned(int order_no, Product product_owned, Customer product_owner, int owned_quantity,
+	public ProductOwned(Integer order_no, Product product_owned, Customer product_owner, int owned_quantity,
 			Date owned_date, String owned_status) {
 		super();
 		this.order_no = order_no;
@@ -25,11 +30,11 @@ public class ProductOwned {
 		this.owned_status = owned_status;
 	}
 
-	public int getOrder_no() {
+	public Integer getOrder_no() {
 		return order_no;
 	}
 
-	public void setOrder_no(int order_no) {
+	public void setOrder_no(Integer order_no) {
 		this.order_no = order_no;
 	}
 

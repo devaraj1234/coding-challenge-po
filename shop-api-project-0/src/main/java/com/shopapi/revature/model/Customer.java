@@ -17,6 +17,10 @@ public class Customer {
 	public Customer(Integer customer_id) {
 		this.customer_id = customer_id;
 	}
+	public Customer(String customer_fname, String customer_lname) {
+		this.customer_fname = customer_fname;
+		this.customer_lname = customer_lname;
+	}
 
 	public Customer(Integer customer_id, String customer_fname, String customer_lname, String customer_address,
 			String customer_email, int customer_phone, int customer_ssn, LoginDetails customer_login) {

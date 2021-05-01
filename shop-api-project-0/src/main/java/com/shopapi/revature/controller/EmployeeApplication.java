@@ -6,6 +6,7 @@ import java.util.Scanner;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.shopapi.revature.model.AccountCollection;
 import com.shopapi.revature.model.LoginDetails;
 import com.shopapi.revature.model.OfferedMade;
 import com.shopapi.revature.model.Product;
@@ -113,11 +114,13 @@ public class EmployeeApplication {
 											System.out.println("Offer No: " + offer.getOffer_no() + "\tProduct Id: "
 													+ offer.getProduct().getProduct_id() + "\tProduct Name: "
 													+ offer.getProduct().getProduct_name() + "\tQuantity Availiabe: "
-													+ offer.getProduct().getProduct_quantity() + "\tExpected Price Per Unit: "
-													+ offer.getProduct().getexpected_price_per_unit() + "\tOffered Quantity: "
-													+ offer.getOffer_quantity() + "\tOffered Price per Unit: "
-													+ offer.getOffered_price_per_unit() + "\tPayment Made: "
-													+ offer.getPayment_made() + "\tOffer Status: " + offer.getOffer_status());
+													+ offer.getProduct().getProduct_quantity()
+													+ "\tExpected Price Per Unit: "
+													+ offer.getProduct().getexpected_price_per_unit()
+													+ "\tOffered Quantity: " + offer.getOffer_quantity()
+													+ "\tOffered Price per Unit: " + offer.getOffered_price_per_unit()
+													+ "\tPayment Made: " + offer.getPayment_made() + "\tOffer Status: "
+													+ offer.getOffer_status());
 										}
 									}
 									System.out.println(
@@ -137,11 +140,24 @@ public class EmployeeApplication {
 
 								break offerloop;
 							}
-
 							break employeeSelection;
 						}
 						case "5": {
-							
+							System.out.println("List of all payments received: ");
+							List<AccountCollection> accountCollection = employeeService.viewAllPaymentMade();
+							System.out.println("---------------------------------------------------------------------");
+							for (AccountCollection accountColl : accountCollection) {
+								System.out.println("Collection Id: " + accountColl.getCollection_id()
+										+ "\tProduct Order No: " + accountColl.getproduct_owner().getOrder_no()
+										+ "\t Customer Name: "
+										+ accountColl.getproduct_owner().getProduct_owner().getCustomer_fname() + " "
+										+ accountColl.getproduct_owner().getProduct_owner().getCustomer_lname()
+										+ "\t\tTotal Price: " + accountColl.getTotal_price() + "\tPayment Made : "
+										+ accountColl.getPayment_made() + "\tPayment Date: "
+										+ accountColl.getPayment_date() + "\tRemaining Balance: "
+										+ accountColl.getRemaining_balance());
+							}
+							System.out.println("---------------------------------------------------------------------");
 							break employeeSelection;
 						}
 
