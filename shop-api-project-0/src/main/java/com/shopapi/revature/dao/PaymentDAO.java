@@ -7,5 +7,5 @@ import com.shopapi.revature.model.AccountCollection;
 public interface PaymentDAO {
 	
 	public List<AccountCollection> viewAllPayment();
-
+	public List<AccountCollection> viewAllPaymentForCustomer(AccountCollection Customer_id);
 }

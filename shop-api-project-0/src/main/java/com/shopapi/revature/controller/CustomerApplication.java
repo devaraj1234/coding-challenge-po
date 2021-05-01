@@ -11,6 +11,7 @@ import com.shopapi.revature.model.Customer;
 import com.shopapi.revature.model.LoginDetails;
 import com.shopapi.revature.model.OfferedMade;
 import com.shopapi.revature.model.Product;
+import com.shopapi.revature.model.ProductOwned;
 import com.shopapi.revature.model.User;
 import com.shopapi.revature.service.CommonService;
 import com.shopapi.revature.service.CustomerService;
@@ -156,13 +157,22 @@ public class CustomerApplication {
 								}
 								case "2": {
 									System.out.println("List of products you owned are: ");
-
-									System.out.println(
-											"-------------------------------------------------------------------");
-
+									List<ProductOwned> productOwned = customerService
+											.viewAllProductOwned(new ProductOwned(null, new Customer(customer_id)));
+									System.out.println("-------------------------------------------------------------");
+									for (ProductOwned ownedProduct : productOwned) {
+										System.out.println("\nOrder No : " + ownedProduct.getOrder_no()
+												+ "\tProduct Name: " + ownedProduct.getProduct_owned().getProduct_name()
+												+ "\tOwned Quantity: " + ownedProduct.getOwned_quantity()
+												+ "\tOwned Date: " + ownedProduct.getOwned_date() + "\tOwned Status: "
+												+ ownedProduct.getOwned_status());
+									}
+									System.out.println("-------------------------------------------------------------");
 									break customerSelection;
 								}
 								case "3": {
+									System.out.println("List of your Payment status: ")
+									
 
 									break customerSelection;
 								}

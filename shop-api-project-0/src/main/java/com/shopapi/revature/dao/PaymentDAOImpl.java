@@ -55,4 +55,10 @@ public class PaymentDAOImpl implements PaymentDAO {
 		return accountCollection;
 	}
 
+	@Override
+	public List<AccountCollection> viewAllPaymentForCustomer(AccountCollection Customer_id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

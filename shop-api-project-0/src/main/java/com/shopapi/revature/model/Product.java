@@ -14,6 +14,10 @@ public class Product {
 	public Product(Integer product_id) {
 		this.product_id = product_id;
 	}
+	
+	public Product(String product_name) {
+		this.product_name = product_name;
+	}
 
 	public Product(Integer product_id, String product_name, int product_quantity, double expected_price_per_unit,
 			String product_description) {
