@@ -12,7 +12,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.shopapi.revature.model.Product;
-import com.shopapi.revature.model.ProductOwned;
+import com.shopapi.revature.model.ProductOwner;
 import com.shopapi.revature.utility.ConnectionUtility;
 
 public class ProductDAOImpl implements ProductDAO {
@@ -92,9 +92,9 @@ public class ProductDAOImpl implements ProductDAO {
 	}
 
 	@Override
-	public List<ProductOwned> viewAllProductOwned(ProductOwned owner) {
-		log.info("list all products invoked");
-		List<ProductOwned> products = new ArrayList<>();
+	public List<ProductOwner> viewAllProductOwned(ProductOwner owner) {
+		log.info("list all products owned invoked");
+		List<ProductOwner> products = new ArrayList<>();
 		try (Connection conn = ConnectionUtility.getConnection()) {
 			log.info("successfully connected to data base");
 			String query = "select * from shopapi.product_owner "
@@ -104,7 +104,7 @@ public class ProductDAOImpl implements ProductDAO {
 			ps.setInt(1, owner.getProduct_owner().getCustomer_id());
 			rs = ps.executeQuery();
 			while (rs.next()) {
-				ProductOwned product = new ProductOwned();
+				ProductOwner product = new ProductOwner();
 				product.setOrder_no(rs.getInt("order_no"));
 				product.setProduct_owned(new Product(rs.getString("product_name")));
 				product.setOwned_quantity(rs.getInt("owned_quantity"));
@@ -113,11 +113,11 @@ public class ProductDAOImpl implements ProductDAO {
 				products.add(product);
 			}
 		} catch (SQLException e) {
-			log.debug("list user failed");
+			log.debug("list all products owned failed");
 			e.printStackTrace();
 			return null;
 		}
-		log.info("list user completed");
+		log.info("list all products owned completed");
 		return products;
 	}
 }

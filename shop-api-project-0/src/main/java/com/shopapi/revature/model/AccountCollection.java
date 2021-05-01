@@ -5,7 +5,7 @@ import java.util.Date;
 public class AccountCollection {
 
 	private int collection_id;
-	private ProductOwned product_owner;
+	private ProductOwner product_owner;
 	private double offered_price_per_unit;
 	private double total_price;
 	private double payment_made;
@@ -15,7 +15,7 @@ public class AccountCollection {
 	public AccountCollection() {
 	}
 
-	public AccountCollection(int collection_id, ProductOwned product_owner, double offered_price_per_unit,
+	public AccountCollection(int collection_id, ProductOwner product_owner, double offered_price_per_unit,
 			double total_price, double payment_made, double remaining_balance, Date payment_date) {
 		super();
 		this.collection_id = collection_id;
@@ -35,11 +35,11 @@ public class AccountCollection {
 		this.collection_id = collection_id;
 	}
 
-	public ProductOwned getproduct_owner() {
+	public ProductOwner getproduct_owner() {
 		return product_owner;
 	}
 
-	public void setproduct_owner(ProductOwned product_owner) {
+	public void setproduct_owner(ProductOwner product_owner) {
 		this.product_owner = product_owner;
 	}
 

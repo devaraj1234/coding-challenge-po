@@ -2,7 +2,7 @@ package com.shopapi.revature.model;
 
 import java.util.Date;
 
-public class ProductOwned {
+public class ProductOwner {
 
 	private Integer order_no;
 	private Product product_owned;
@@ -11,15 +11,21 @@ public class ProductOwned {
 	private Date owned_date;
 	private String owned_status;
 
-	public ProductOwned() {
+	public ProductOwner() {
 	}
 	
-	public ProductOwned(Integer order_no, Customer product_owner) {
+	public ProductOwner(Integer order_no, Customer product_owner, Product product_owned) {
 		this.order_no = order_no;
-		this.product_owner =product_owner;
+		this.product_owner = product_owner;
+		this.product_owned = product_owned;
+	}
+	
+	public ProductOwner(Integer order_no, Customer product_owner) {
+		this.order_no = order_no;
+		this.product_owner = product_owner;
 	}
 
-	public ProductOwned(Integer order_no, Product product_owned, Customer product_owner, int owned_quantity,
+	public ProductOwner(Integer order_no, Product product_owned, Customer product_owner, int owned_quantity,
 			Date owned_date, String owned_status) {
 		super();
 		this.order_no = order_no;
@@ -99,7 +105,7 @@ public class ProductOwned {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		ProductOwned other = (ProductOwned) obj;
+		ProductOwner other = (ProductOwner) obj;
 		if (order_no != other.order_no)
 			return false;
 		if (owned_date == null) {

@@ -7,11 +7,12 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.shopapi.revature.Exceptions.InvalidLoginException;
+import com.shopapi.revature.model.AccountCollection;
 import com.shopapi.revature.model.Customer;
 import com.shopapi.revature.model.LoginDetails;
 import com.shopapi.revature.model.OfferedMade;
 import com.shopapi.revature.model.Product;
-import com.shopapi.revature.model.ProductOwned;
+import com.shopapi.revature.model.ProductOwner;
 import com.shopapi.revature.model.User;
 import com.shopapi.revature.service.CommonService;
 import com.shopapi.revature.service.CustomerService;
@@ -157,10 +158,10 @@ public class CustomerApplication {
 								}
 								case "2": {
 									System.out.println("List of products you owned are: ");
-									List<ProductOwned> productOwned = customerService
-											.viewAllProductOwned(new ProductOwned(null, new Customer(customer_id)));
+									List<ProductOwner> productOwner = customerService
+											.viewAllProductOwned(new ProductOwner(null, new Customer(customer_id)));
 									System.out.println("-------------------------------------------------------------");
-									for (ProductOwned ownedProduct : productOwned) {
+									for (ProductOwner ownedProduct : productOwner) {
 										System.out.println("\nOrder No : " + ownedProduct.getOrder_no()
 												+ "\tProduct Name: " + ownedProduct.getProduct_owned().getProduct_name()
 												+ "\tOwned Quantity: " + ownedProduct.getOwned_quantity()
@@ -171,9 +172,23 @@ public class CustomerApplication {
 									break customerSelection;
 								}
 								case "3": {
-									System.out.println("List of your Payment status: ")
-									
-
+									AccountCollection customer = new AccountCollection();
+									customer.setproduct_owner(new ProductOwner(null, new Customer(customer_id)));
+									List<AccountCollection> paymentList = customerService.viewAllPaymentList(customer);
+									System.out.println("List of your Payment status: ");
+									System.out.println("-------------------------------------------------------------");
+									for (AccountCollection payment : paymentList) {
+										System.out.println(
+												"Payment Id: " + payment.getCollection_id() + "\tProduct Order No: "
+														+ payment.getproduct_owner().getOrder_no() + "\tProduct Name: "
+														+ payment.getproduct_owner().getProduct_owned()
+																.getProduct_name()
+														+ "\tTotal Price: " + payment.getTotal_price()
+														+ "\tPayment Made: " + payment.getPayment_made()
+														+ "\tPayment Date: " + payment.getPayment_date()
+														+ "\tRemaining Payment: " + payment.getRemaining_balance());
+									}
+									System.out.println("-------------------------------------------------------------");
 									break customerSelection;
 								}
 								case "q": {
