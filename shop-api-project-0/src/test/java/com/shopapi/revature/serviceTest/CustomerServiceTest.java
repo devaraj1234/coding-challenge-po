@@ -57,6 +57,4 @@ public class CustomerServiceTest {
 		boolean actual_result = customerService.makePayment(0, 0);
 		assertEquals(expected_result, actual_result);
 	}
-	
-
 }
