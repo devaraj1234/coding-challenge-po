@@ -32,7 +32,7 @@ public class CustomerApplication {
 			initialInstructions();
 			String menu = scan.next();
 			selection: switch (menu) {
-			case "1": {
+			case "1":
 				try {
 					log.info("create user login function started");
 					System.out.println("Enter User Name: ");
@@ -47,8 +47,8 @@ public class CustomerApplication {
 					e.printStackTrace();
 				}
 				break selection;
-			}
-			case "2": {
+
+			case "2":
 				try {
 					log.info("user login function stared");
 					System.out.println("Enter User Name: ");
@@ -79,6 +79,7 @@ public class CustomerApplication {
 							int phone = scan.nextInt();
 							System.out.println("Enter SSN: ");
 							int ssn = scan.nextInt();
+
 							boolean addCustomer = customerService.addCustomer(new Customer(null, fname, lname, email,
 									address, phone, ssn, new LoginDetails(login_id, null, null, null)));
 							if (addCustomer == true) {
@@ -87,10 +88,12 @@ public class CustomerApplication {
 							}
 						}
 						if (customer_id > 0) {
-							System.out.println("--------------------------------------------------------------------");
+							System.out.println(
+									"--------------------------------------------------------------------------------------------------------------------------");
 							System.out.println("User: " + login.getLogin_user() + "\t\t\t\t\tUser_role: "
 									+ login.getUser_role().getUser_role());
-							System.out.println("---------------------------------------------------------------------");
+							System.out.println(
+									"--------------------------------------------------------------------------------------------------------------------------");
 							customerloop: while (true) {
 								customerInstruction();
 								String customermenu = scan.next();
@@ -98,11 +101,13 @@ public class CustomerApplication {
 								case "1": {
 									List<Product> products = customerService.getAllProducts();
 									System.out.println("\nList of availiabe products fro Auction...");
-									System.out.println("--------------------------------------------------------");
+									System.out.println(
+											"--------------------------------------------------------------------------------------------------------------------------");
 									for (Product product : products) {
 										System.out.println(product);
 									}
-									System.out.println("--------------------------------------------------------");
+									System.out.println(
+											"--------------------------------------------------------------------------------------------------------------------------");
 									offerloop: while (true) {
 										System.out.println("\nEnter 1 to make offer \nEnter q to Exit \nEnter Here: ");
 										String offerMenu = scan.next();
@@ -157,26 +162,29 @@ public class CustomerApplication {
 									break customerSelection;
 								}
 								case "2": {
-									System.out.println("List of products you owned are: ");
 									List<ProductOwner> productOwner = customerService
 											.viewAllProductOwned(new ProductOwner(null, new Customer(customer_id)));
-									System.out.println("-------------------------------------------------------------");
+									System.out.println("List of products you owned are: ");
+									System.out.println(
+											"--------------------------------------------------------------------------------------------------------------------------");
 									for (ProductOwner ownedProduct : productOwner) {
-										System.out.println("\nOrder No : " + ownedProduct.getOrder_no()
+										System.out.println("Order No : " + ownedProduct.getOrder_no()
 												+ "\tProduct Name: " + ownedProduct.getProduct_owned().getProduct_name()
 												+ "\tOwned Quantity: " + ownedProduct.getOwned_quantity()
 												+ "\tOwned Date: " + ownedProduct.getOwned_date() + "\tOwned Status: "
 												+ ownedProduct.getOwned_status());
 									}
-									System.out.println("-------------------------------------------------------------");
+									System.out.println(
+											"--------------------------------------------------------------------------------------------------------------------------");
 									break customerSelection;
 								}
 								case "3": {
 									AccountCollection customer = new AccountCollection();
 									customer.setproduct_owner(new ProductOwner(null, new Customer(customer_id)));
 									List<AccountCollection> paymentList = customerService.viewAllPaymentList(customer);
-									System.out.println("List of your Payment status: ");
-									System.out.println("-------------------------------------------------------------");
+									System.out.println("List of your Payment history: ");
+									System.out.println(
+											"--------------------------------------------------------------------------------------------------------------------------");
 									for (AccountCollection payment : paymentList) {
 										System.out.println(
 												"Payment Id: " + payment.getCollection_id() + "\tProduct Order No: "
@@ -184,12 +192,39 @@ public class CustomerApplication {
 														+ payment.getproduct_owner().getProduct_owned()
 																.getProduct_name()
 														+ "\tTotal Price: " + payment.getTotal_price()
-														+ "\tPayment Made: " + payment.getPayment_made()
 														+ "\tPayment Date: " + payment.getPayment_date()
+														+ "\tPayment Made: " + payment.getPayment_made()
 														+ "\tRemaining Payment: " + payment.getRemaining_balance());
 									}
-									System.out.println("-------------------------------------------------------------");
+									System.out.println(
+											"--------------------------------------------------------------------------------------------------------------------------");
 									break customerSelection;
+								}
+								case "4": {
+									System.out.println("Enter order no you want to pay for: ");
+									int order_no = scan.nextInt();
+									AccountCollection remainingPayment = customerService.remainingPayment(order_no);
+									System.out.println("Payment Status on Order No: "+order_no);
+									System.out.println(
+											"--------------------------------------------------------------------------------------------------------------------------");
+									System.out.println("Product Order No: "
+											+ remainingPayment.getproduct_owner().getOrder_no() + "\tTotal Price: "
+											+ remainingPayment.getTotal_price() + "\tLast Payment Date: "
+											+ remainingPayment.getPayment_date() + "\tLast Payment Made: "
+											+ remainingPayment.getPayment_made() + "\tRemaining Payment: "
+											+ remainingPayment.getRemaining_balance());
+									System.out.println(
+											"--------------------------------------------------------------------------------------------------------------------------");
+									double remainingBalance = remainingPayment.getRemaining_balance();
+									System.out.println("Enter Amount you want to pay: ");
+									double amount = scan.nextDouble();
+									if (remainingBalance >= amount) {
+										customerService.makePayment(order_no, amount);
+									} else {
+										System.out.println("Your remaining balance is " + remainingBalance + " only.");
+									}
+									break customerSelection;
+
 								}
 								case "q": {
 									break customerloop;
@@ -207,8 +242,8 @@ public class CustomerApplication {
 					log.info("user login function failed");
 					e.printStackTrace();
 				}
-				break selection;
-			}
+				break loop;
+
 			default:
 				System.out.println("Wrong Input!!!!!!! Try Again");
 				break selection;
@@ -227,8 +262,8 @@ public class CustomerApplication {
 
 	public static void customerInstruction() {
 		System.out.println(
-				"\nEnter 1 to view availiabe items \nEnter 2 to view items owned \nEnter 3 to view remaining payment");
-		System.out.println("Enter 'q' for Exit");
+				"\nEnter 1 for view availiabe items \nEnter 2 for view items owned \nEnter 3 to view payment history \nEnter 4 to make payment");
+		System.out.println("Enter 'q' for Exit from Customer Portal");
 		System.out.println("Enter Here: ");
 	}
 

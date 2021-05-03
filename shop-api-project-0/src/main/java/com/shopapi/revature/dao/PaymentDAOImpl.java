@@ -72,7 +72,8 @@ public class PaymentDAOImpl implements PaymentDAO {
 			while (rs.next()) {
 				AccountCollection payment = new AccountCollection();
 				payment.setCollection_id(rs.getInt("collection_id"));
-				payment.setproduct_owner(new ProductOwner(rs.getInt("order_no"), null, new Product(rs.getString("product_name"))));
+				payment.setproduct_owner(
+						new ProductOwner(rs.getInt("order_no"), null, new Product(rs.getString("product_name"))));
 				payment.setTotal_price(rs.getDouble("total_price"));
 				payment.setPayment_made(rs.getDouble("payment_made"));
 				payment.setPayment_date(rs.getDate("payment_date"));
@@ -86,6 +87,56 @@ public class PaymentDAOImpl implements PaymentDAO {
 		}
 		log.info("view all paymnent status invoked");
 		return paymentList;
+	}
+
+	@Override
+	public AccountCollection viewRemainingPayment(int order_no) {
+		log.info("view remaining payment by order no");
+		AccountCollection payment = new AccountCollection();
+		try (Connection conn = ConnectionUtility.getConnection()) {
+			log.info("successfully connected to data base");
+			String query = "select * from shopapi.account_collection where product_order_no = ? order by remaining_payment asc limit 1;";
+			ps = conn.prepareStatement(query);
+			ps.setInt(1, order_no);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				payment.setCollection_id(rs.getInt("collection_id"));
+				payment.setproduct_owner(
+						new ProductOwner(rs.getInt("product_order_no"), null));
+				payment.setTotal_price(rs.getDouble("total_price"));
+				payment.setPayment_made(rs.getDouble("payment_made"));
+				payment.setPayment_date(rs.getDate("payment_date"));
+				payment.setRemaining_balance(rs.getDouble("remaining_payment"));
+			}
+		} catch (SQLException e) {
+			log.debug("view remaining payment by order no failed");
+			e.printStackTrace();
+			return null;
+		}
+		log.info("view remaining payment by order no completed");
+		return payment;
+	}
+
+	@Override
+	public boolean makePayment(int order_no, double amount) {
+		log.info("make payment method invoked");
+		try (Connection conn = ConnectionUtility.getConnection()) {
+			log.info("successfully connected to data base");
+			String query = "insert into shopapi.account_collection (product_order_no, offered_price_per_unit, total_price, payment_made, remaining_payment, payment_date) "
+					+ "select product_order_no, offered_price_per_unit, total_price, ?, (remaining_payment-?), payment_date from shopapi.account_collection "
+					+ "where product_order_no = ? order by remaining_payment asc limit 1;";
+			ps = conn.prepareStatement(query);
+			ps.setDouble(1, amount);
+			ps.setDouble(2, amount);
+			ps.setInt(3, order_no);
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			log.debug("make payment method failed");
+			e.printStackTrace();
+			return false;
+		}
+		log.info("make payment method completed");
+		return true;
 	}
 
 }

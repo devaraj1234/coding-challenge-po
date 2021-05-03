@@ -26,7 +26,7 @@ public class UserDAOImpl implements UserDAO {
 		log.info("create user invoked");
 		try (Connection conn = ConnectionUtility.getConnection()) {
 			log.info("successfully connected to data base");
-			ps = conn.prepareStatement("INSERT INTO shopapi.users VALUES(3, ?);");
+			ps = conn.prepareStatement("INSERT INTO shopapi.users VALUES(default, ?);");
 			ps.setString(1, t.getUser_role());
 			ps.executeUpdate();
 		} catch (SQLException e) {

@@ -44,7 +44,7 @@ public class OfferedMadeDAOImpl implements OfferMadeDAO {
 			e.printStackTrace();
 			return false;
 		}
-		log.info("add to offer table completed");
+		log.info("offer successfull added to the offer table");
 		return true;
 	}
 

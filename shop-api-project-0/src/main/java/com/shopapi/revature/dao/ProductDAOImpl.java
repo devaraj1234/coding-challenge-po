@@ -60,18 +60,34 @@ public class ProductDAOImpl implements ProductDAO {
 				products.add(product);
 			}
 		} catch (SQLException e) {
-			log.debug("list user failed");
+			log.debug("list all products failed");
 			e.printStackTrace();
 			return null;
 		}
-		log.info("list user completed");
+		log.info("list all products completed");
 		return products;
 	}
 
 	@Override
 	public boolean update(Product t) {
-		// TODO Auto-generated method stub
-		return false;
+		log.info("update product to the list invoked");
+		try (Connection conn = ConnectionUtility.getConnection()) {
+			log.info("successfully connected to data base");
+			ps = conn.prepareStatement("UPDATE shopapi.product SET product_name =? , availiable_quantity = ?, product_description = ?,"
+					+ "expected_price_per_unit = ? WHERE product_id = ?");
+			ps.setString(1, t.getProduct_name());
+			ps.setInt(2, t.getProduct_quantity());
+			ps.setString(3, t.getProduct_description());
+			ps.setDouble(4, t.getexpected_price_per_unit());
+			ps.setInt(5, t.getProduct_id());
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			log.debug("update product to the list failed");
+			e.printStackTrace();
+			return false;
+		}
+		log.info("update product to the list completed");
+		return true;
 	}
 
 	@Override
@@ -120,4 +136,5 @@ public class ProductDAOImpl implements ProductDAO {
 		log.info("list all products owned completed");
 		return products;
 	}
+
 }

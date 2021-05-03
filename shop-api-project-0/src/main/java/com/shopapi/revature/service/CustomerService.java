@@ -45,5 +45,13 @@ public class CustomerService {
 	public List<AccountCollection> viewAllPaymentList(AccountCollection customer){
 		return paymentDAO.viewAllPaymentForCustomer(customer);
 	}
+	
+	public AccountCollection remainingPayment(int order_no) {
+		return paymentDAO.viewRemainingPayment(order_no);
+	}
+	
+	public boolean makePayment(int order_no, double amount) {
+		return paymentDAO.makePayment(order_no, amount);
+	}
 
 }

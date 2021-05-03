@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.shopapi.revature.dao.LoginDetailsDAOImpl;
 import com.shopapi.revature.dao.UserDAOImpl;
+import com.shopapi.revature.model.AccountCollection;
 import com.shopapi.revature.model.LoginDetails;
 import com.shopapi.revature.model.User;
 
@@ -35,5 +36,4 @@ public class CommonService {
 		return loginDAO.getLoginDetail();
 		
 	}
-
 }

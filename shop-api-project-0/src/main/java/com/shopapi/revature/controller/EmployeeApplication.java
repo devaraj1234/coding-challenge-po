@@ -104,7 +104,7 @@ public class EmployeeApplication {
 								String offerMenu = scan.next();
 								switch (offerMenu) {
 								case "1": {
-									System.out.println("Enter product id: ");
+									System.out.println("Enter product id : ");
 									int product_id = scan.nextInt();
 									System.out.println("List of offers for priduct id " + product_id + ":");
 									System.out.println(
@@ -123,28 +123,28 @@ public class EmployeeApplication {
 													+ offer.getOffer_status());
 										}
 									}
-									System.out.println(
-											"----------------------------------------------------------------");
+									System.out.println("----------------------------------------------------------------");
 									System.out.println("Enter offer no to accept offer: ");
 									int offer_no = scan.nextInt();
 									employeeService.acceptOffer(new OfferedMade(offer_no, new Product(product_id)));
 									break offerloop;
 								}
 								case "2": {
+									System.out.println("Enter offer no to Reject Offer: ");
+									int offer_no = scan.nextInt();
 
 									break offerloop;
 								}
 								case "q":
 									break offerloop;
 								}
-
 								break offerloop;
 							}
 							break employeeSelection;
 						}
 						case "5": {
-							System.out.println("List of all payments received: ");
 							List<AccountCollection> accountCollection = employeeService.viewAllPaymentMade();
+							System.out.println("List of all payments received: ");
 							System.out.println("---------------------------------------------------------------------");
 							for (AccountCollection accountColl : accountCollection) {
 								System.out.println("Collection Id: " + accountColl.getCollection_id()
@@ -152,9 +152,9 @@ public class EmployeeApplication {
 										+ "\t Customer Name: "
 										+ accountColl.getproduct_owner().getProduct_owner().getCustomer_fname() + " "
 										+ accountColl.getproduct_owner().getProduct_owner().getCustomer_lname()
-										+ "\t\tTotal Price: " + accountColl.getTotal_price() + "\tPayment Made : "
+										+ "\t\tTotal Price: " + accountColl.getTotal_price()
 										+ accountColl.getPayment_made() + "\tPayment Date: "
-										+ accountColl.getPayment_date() + "\tRemaining Balance: "
+										+ "\tPayment Received : " + accountColl.getPayment_date() + "\tRemaining Balance: "
 										+ accountColl.getRemaining_balance());
 							}
 							System.out.println("---------------------------------------------------------------------");
@@ -193,5 +193,4 @@ public class EmployeeApplication {
 		System.out.println("Enter Here: ");
 
 	}
-
 }

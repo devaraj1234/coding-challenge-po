@@ -55,3 +55,524 @@
 2021-05-01 16:34:00  INFO com.shopapi.revature.dao.PaymentDAOImpl:61 view all paymnent status invoked
 2021-05-01 16:34:00  INFO com.shopapi.revature.dao.PaymentDAOImpl:64 successfully connected to data base
 2021-05-01 16:34:00  INFO com.shopapi.revature.dao.PaymentDAOImpl:87 view all paymnent status invoked
+2021-05-01 18:21:09  INFO com.shopapi.revature.controller.CustomerApplication:25 customer application portal started
+2021-05-01 18:21:16  INFO com.shopapi.revature.controller.CustomerApplication:53 user login function stared
+2021-05-01 18:21:22  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-01 18:21:22  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-01 18:21:22  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-01 18:21:22  INFO com.shopapi.revature.controller.CustomerApplication:63 user login success
+2021-05-01 18:21:22  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-01 18:21:23  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-01 18:21:23  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-01 18:21:23  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-01 18:21:23  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-01 18:21:23  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-01 18:21:34  INFO com.shopapi.revature.dao.ProductDAOImpl:96 list all products owned invoked
+2021-05-01 18:21:34  INFO com.shopapi.revature.dao.ProductDAOImpl:99 successfully connected to data base
+2021-05-01 18:21:34  INFO com.shopapi.revature.dao.ProductDAOImpl:120 list all products owned completed
+2021-05-01 18:22:33  INFO com.shopapi.revature.dao.PaymentDAOImpl:61 view all paymnent status invoked
+2021-05-01 18:22:33  INFO com.shopapi.revature.dao.PaymentDAOImpl:64 successfully connected to data base
+2021-05-01 18:22:33  INFO com.shopapi.revature.dao.PaymentDAOImpl:88 view all paymnent status invoked
+2021-05-01 18:24:37  INFO com.shopapi.revature.dao.PaymentDAOImpl:94 view remaining payment by order no
+2021-05-01 18:24:37  INFO com.shopapi.revature.dao.PaymentDAOImpl:97 successfully connected to data base
+2021-05-01 18:24:37  DEBUG com.shopapi.revature.dao.PaymentDAOImpl:112 view remaining payment by order no failed
+2021-05-01 18:24:37  INFO com.shopapi.revature.controller.CustomerApplication:240 user login function failed
+2021-05-01 18:26:01  INFO com.shopapi.revature.controller.CustomerApplication:25 customer application portal started
+2021-05-01 18:26:03  INFO com.shopapi.revature.controller.CustomerApplication:53 user login function stared
+2021-05-01 18:26:12  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-01 18:26:12  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-01 18:26:12  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-01 18:26:12  INFO com.shopapi.revature.controller.CustomerApplication:63 user login success
+2021-05-01 18:26:12  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-01 18:26:12  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-01 18:26:12  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-01 18:26:12  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-01 18:26:12  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-01 18:26:12  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-01 18:26:16  INFO com.shopapi.revature.dao.PaymentDAOImpl:94 view remaining payment by order no
+2021-05-01 18:26:16  INFO com.shopapi.revature.dao.PaymentDAOImpl:97 successfully connected to data base
+2021-05-01 18:26:16  DEBUG com.shopapi.revature.dao.PaymentDAOImpl:112 view remaining payment by order no failed
+2021-05-01 18:26:16  INFO com.shopapi.revature.controller.CustomerApplication:240 user login function failed
+2021-05-01 18:28:13  INFO com.shopapi.revature.controller.CustomerApplication:25 customer application portal started
+2021-05-01 18:28:20  INFO com.shopapi.revature.controller.CustomerApplication:53 user login function stared
+2021-05-01 18:28:27  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-01 18:28:27  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-01 18:28:27  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-01 18:28:27  INFO com.shopapi.revature.controller.CustomerApplication:63 user login success
+2021-05-01 18:28:27  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-01 18:28:27  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-01 18:28:27  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-01 18:28:27  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-01 18:28:27  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-01 18:28:27  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-01 18:28:31  INFO com.shopapi.revature.dao.PaymentDAOImpl:94 view remaining payment by order no
+2021-05-01 18:28:31  INFO com.shopapi.revature.dao.PaymentDAOImpl:97 successfully connected to data base
+2021-05-01 18:28:31  DEBUG com.shopapi.revature.dao.PaymentDAOImpl:112 view remaining payment by order no failed
+2021-05-01 18:28:31  INFO com.shopapi.revature.controller.CustomerApplication:240 user login function failed
+2021-05-01 18:30:44  INFO com.shopapi.revature.controller.CustomerApplication:25 customer application portal started
+2021-05-01 18:30:46  INFO com.shopapi.revature.controller.CustomerApplication:53 user login function stared
+2021-05-01 18:30:55  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-01 18:30:55  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-01 18:30:55  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-01 18:30:55  INFO com.shopapi.revature.controller.CustomerApplication:63 user login success
+2021-05-01 18:30:55  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-01 18:30:55  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-01 18:30:55  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-01 18:30:55  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-01 18:30:55  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-01 18:30:55  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-01 18:31:08  INFO com.shopapi.revature.dao.PaymentDAOImpl:94 view remaining payment by order no
+2021-05-01 18:31:08  INFO com.shopapi.revature.dao.PaymentDAOImpl:97 successfully connected to data base
+2021-05-01 18:31:08  INFO com.shopapi.revature.dao.PaymentDAOImpl:116 view remaining payment by order no completed
+2021-05-01 18:31:08  INFO com.shopapi.revature.controller.CustomerApplication:240 user login function failed
+2021-05-01 18:32:08  INFO com.shopapi.revature.controller.CustomerApplication:25 customer application portal started
+2021-05-01 18:32:09  INFO com.shopapi.revature.controller.CustomerApplication:53 user login function stared
+2021-05-01 18:32:18  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-01 18:32:18  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-01 18:32:18  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-01 18:32:18  INFO com.shopapi.revature.controller.CustomerApplication:63 user login success
+2021-05-01 18:32:18  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-01 18:32:18  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-01 18:32:18  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-01 18:32:18  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-01 18:32:18  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-01 18:32:18  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-01 18:32:36  INFO com.shopapi.revature.dao.PaymentDAOImpl:94 view remaining payment by order no
+2021-05-01 18:32:36  INFO com.shopapi.revature.dao.PaymentDAOImpl:97 successfully connected to data base
+2021-05-01 18:32:36  INFO com.shopapi.revature.dao.PaymentDAOImpl:116 view remaining payment by order no completed
+2021-05-01 18:34:25  INFO com.shopapi.revature.dao.PaymentDAOImpl:122 make payment method invoked
+2021-05-01 18:34:25  INFO com.shopapi.revature.dao.PaymentDAOImpl:124 successfully connected to data base
+2021-05-01 18:34:25  DEBUG com.shopapi.revature.dao.PaymentDAOImpl:134 make payment method failed
+2021-05-01 18:35:12  INFO com.shopapi.revature.controller.CustomerApplication:25 customer application portal started
+2021-05-01 18:35:14  INFO com.shopapi.revature.controller.CustomerApplication:53 user login function stared
+2021-05-01 18:35:20  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-01 18:35:20  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-01 18:35:20  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-01 18:35:20  INFO com.shopapi.revature.controller.CustomerApplication:63 user login success
+2021-05-01 18:35:20  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-01 18:35:20  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-01 18:35:20  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-01 18:35:20  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-01 18:35:21  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-01 18:35:21  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-01 18:35:37  INFO com.shopapi.revature.dao.PaymentDAOImpl:94 view remaining payment by order no
+2021-05-01 18:35:37  INFO com.shopapi.revature.dao.PaymentDAOImpl:97 successfully connected to data base
+2021-05-01 18:35:37  INFO com.shopapi.revature.dao.PaymentDAOImpl:116 view remaining payment by order no completed
+2021-05-01 18:35:44  INFO com.shopapi.revature.dao.PaymentDAOImpl:122 make payment method invoked
+2021-05-01 18:35:44  INFO com.shopapi.revature.dao.PaymentDAOImpl:124 successfully connected to data base
+2021-05-01 18:35:44  INFO com.shopapi.revature.dao.PaymentDAOImpl:138 make payment method completed
+2021-05-01 18:36:37  INFO com.shopapi.revature.controller.CustomerApplication:53 user login function stared
+2021-05-01 18:36:42  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-01 18:36:42  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-01 18:36:42  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-01 18:36:42  INFO com.shopapi.revature.controller.CustomerApplication:63 user login success
+2021-05-01 18:36:42  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-01 18:36:42  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-01 18:36:42  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-01 18:36:42  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-01 18:36:42  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-01 18:36:42  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-01 18:36:46  INFO com.shopapi.revature.dao.PaymentDAOImpl:61 view all paymnent status invoked
+2021-05-01 18:36:46  INFO com.shopapi.revature.dao.PaymentDAOImpl:64 successfully connected to data base
+2021-05-01 18:36:46  INFO com.shopapi.revature.dao.PaymentDAOImpl:88 view all paymnent status invoked
+2021-05-02 13:37:06  INFO com.shopapi.revature.controller.EmployeeApplication:32 user login function stared
+2021-05-02 13:37:14  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-02 13:37:14  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-02 13:37:14  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-02 13:37:19  INFO com.shopapi.revature.dao.PaymentDAOImpl:29 view all payments invoked
+2021-05-02 13:37:19  INFO com.shopapi.revature.dao.PaymentDAOImpl:32 successfully connected to data base
+2021-05-02 13:37:19  INFO com.shopapi.revature.dao.PaymentDAOImpl:55 view all payments completed
+2021-05-02 13:43:01  INFO com.shopapi.revature.controller.CustomerApplication:25 customer application portal started
+2021-05-02 13:43:07  INFO com.shopapi.revature.controller.CustomerApplication:53 user login function stared
+2021-05-02 13:43:12  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-02 13:43:13  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-02 13:43:13  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-02 13:43:13  INFO com.shopapi.revature.controller.CustomerApplication:63 user login success
+2021-05-02 13:43:13  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 13:43:13  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 13:43:13  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 13:43:13  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 13:43:13  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 13:43:13  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 13:43:20  INFO com.shopapi.revature.dao.PaymentDAOImpl:61 view all paymnent status invoked
+2021-05-02 13:43:20  INFO com.shopapi.revature.dao.PaymentDAOImpl:64 successfully connected to data base
+2021-05-02 13:43:20  INFO com.shopapi.revature.dao.PaymentDAOImpl:88 view all paymnent status invoked
+2021-05-02 13:43:56  INFO com.shopapi.revature.dao.PaymentDAOImpl:94 view remaining payment by order no
+2021-05-02 13:43:56  INFO com.shopapi.revature.dao.PaymentDAOImpl:97 successfully connected to data base
+2021-05-02 13:43:56  INFO com.shopapi.revature.dao.PaymentDAOImpl:116 view remaining payment by order no completed
+2021-05-02 13:46:00  INFO com.shopapi.revature.controller.EmployeeApplication:32 user login function stared
+2021-05-02 13:46:09  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-02 13:46:09  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-02 13:46:09  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-02 13:46:15  INFO com.shopapi.revature.dao.PaymentDAOImpl:29 view all payments invoked
+2021-05-02 13:46:15  INFO com.shopapi.revature.dao.PaymentDAOImpl:32 successfully connected to data base
+2021-05-02 13:46:15  INFO com.shopapi.revature.dao.PaymentDAOImpl:55 view all payments completed
+2021-05-02 13:47:41  INFO com.shopapi.revature.controller.EmployeeApplication:32 user login function stared
+2021-05-02 13:47:51  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-02 13:47:51  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-02 13:47:51  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-02 13:47:54  INFO com.shopapi.revature.dao.PaymentDAOImpl:29 view all payments invoked
+2021-05-02 13:47:54  INFO com.shopapi.revature.dao.PaymentDAOImpl:32 successfully connected to data base
+2021-05-02 13:47:54  INFO com.shopapi.revature.dao.PaymentDAOImpl:55 view all payments completed
+2021-05-02 17:03:26  INFO com.shopapi.revature.controller.EmployeeApplication:32 user login function stared
+2021-05-02 17:03:33  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-02 17:03:33  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-02 17:03:33  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-02 17:04:29  INFO com.shopapi.revature.dao.ProductDAOImpl:27 add product to the list invoked
+2021-05-02 17:04:29  INFO com.shopapi.revature.dao.ProductDAOImpl:29 successfully connected to data base
+2021-05-02 17:04:29  INFO com.shopapi.revature.dao.ProductDAOImpl:41 add product to the list completed
+2021-05-02 17:04:44  INFO com.shopapi.revature.dao.ProductDAOImpl:47 list all products invoked
+2021-05-02 17:04:44  INFO com.shopapi.revature.dao.ProductDAOImpl:50 successfully connected to data base
+2021-05-02 17:04:44  INFO com.shopapi.revature.dao.ProductDAOImpl:67 list user completed
+2021-05-02 17:05:16  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:53 list all offer made invoked
+2021-05-02 17:05:16  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:60 successfully connected to data base
+2021-05-02 17:05:16  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:84 list all offer made completed
+2021-05-02 17:06:00  INFO com.shopapi.revature.controller.CustomerApplication:25 customer application portal started
+2021-05-02 17:06:05  INFO com.shopapi.revature.controller.CustomerApplication:53 user login function stared
+2021-05-02 17:06:10  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-02 17:06:10  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-02 17:06:10  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-02 17:06:10  INFO com.shopapi.revature.controller.CustomerApplication:63 user login success
+2021-05-02 17:06:10  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 17:06:11  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 17:06:11  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 17:06:11  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 17:06:11  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 17:06:11  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 17:06:21  INFO com.shopapi.revature.dao.ProductDAOImpl:47 list all products invoked
+2021-05-02 17:06:21  INFO com.shopapi.revature.dao.ProductDAOImpl:50 successfully connected to data base
+2021-05-02 17:06:21  INFO com.shopapi.revature.dao.ProductDAOImpl:67 list user completed
+2021-05-02 17:08:01  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:30 add to offer table invoked
+2021-05-02 17:08:01  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:32 successfully connected to data base
+2021-05-02 17:08:01  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:47 add to offer table completed
+2021-05-02 17:09:24  INFO com.shopapi.revature.dao.ProductDAOImpl:112 list all products owned invoked
+2021-05-02 17:09:24  INFO com.shopapi.revature.dao.ProductDAOImpl:115 successfully connected to data base
+2021-05-02 17:09:24  INFO com.shopapi.revature.dao.ProductDAOImpl:136 list all products owned completed
+2021-05-02 17:09:54  INFO com.shopapi.revature.dao.PaymentDAOImpl:94 view remaining payment by order no
+2021-05-02 17:09:55  INFO com.shopapi.revature.dao.PaymentDAOImpl:97 successfully connected to data base
+2021-05-02 17:09:55  INFO com.shopapi.revature.dao.PaymentDAOImpl:116 view remaining payment by order no completed
+2021-05-02 17:16:21  INFO com.shopapi.revature.dao.PaymentDAOImpl:122 make payment method invoked
+2021-05-02 17:16:21  INFO com.shopapi.revature.dao.PaymentDAOImpl:124 successfully connected to data base
+2021-05-02 17:16:21  INFO com.shopapi.revature.dao.PaymentDAOImpl:138 make payment method completed
+2021-05-02 17:16:26  INFO com.shopapi.revature.dao.PaymentDAOImpl:61 view all paymnent status invoked
+2021-05-02 17:16:26  INFO com.shopapi.revature.dao.PaymentDAOImpl:64 successfully connected to data base
+2021-05-02 17:16:26  INFO com.shopapi.revature.dao.PaymentDAOImpl:88 view all paymnent status invoked
+2021-05-02 17:18:18  INFO com.shopapi.revature.controller.CustomerApplication:53 user login function stared
+2021-05-02 17:18:34  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-02 17:18:34  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-02 17:18:34  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-02 17:18:34  INFO com.shopapi.revature.controller.CustomerApplication:241 user login function failed
+2021-05-02 17:18:37  INFO com.shopapi.revature.controller.CustomerApplication:53 user login function stared
+2021-05-02 17:18:46  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-02 17:18:46  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-02 17:18:46  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-02 17:18:46  INFO com.shopapi.revature.controller.CustomerApplication:241 user login function failed
+2021-05-02 17:19:54  INFO com.shopapi.revature.controller.EmployeeApplication:32 user login function stared
+2021-05-02 17:20:02  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-02 17:20:02  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-02 17:20:02  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-02 17:20:10  INFO com.shopapi.revature.dao.ProductDAOImpl:47 list all products invoked
+2021-05-02 17:20:10  INFO com.shopapi.revature.dao.ProductDAOImpl:50 successfully connected to data base
+2021-05-02 17:20:10  INFO com.shopapi.revature.dao.ProductDAOImpl:67 list user completed
+2021-05-02 17:20:22  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:53 list all offer made invoked
+2021-05-02 17:20:22  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:60 successfully connected to data base
+2021-05-02 17:20:22  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:84 list all offer made completed
+2021-05-02 17:21:46  INFO com.shopapi.revature.dao.ProductDAOImpl:47 list all products invoked
+2021-05-02 17:21:47  INFO com.shopapi.revature.dao.ProductDAOImpl:50 successfully connected to data base
+2021-05-02 17:21:47  INFO com.shopapi.revature.dao.ProductDAOImpl:67 list user completed
+2021-05-02 17:23:16  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:53 list all offer made invoked
+2021-05-02 17:23:16  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:60 successfully connected to data base
+2021-05-02 17:23:16  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:84 list all offer made completed
+2021-05-02 17:26:45  INFO com.shopapi.revature.controller.EmployeeApplication:32 user login function stared
+2021-05-02 17:26:53  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-02 17:26:53  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-02 17:26:53  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-02 17:26:57  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:53 list all offer made invoked
+2021-05-02 17:26:57  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:60 successfully connected to data base
+2021-05-02 17:26:57  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:84 list all offer made completed
+2021-05-02 17:27:23  INFO com.shopapi.revature.dao.ProductDAOImpl:47 list all products invoked
+2021-05-02 17:27:23  INFO com.shopapi.revature.dao.ProductDAOImpl:50 successfully connected to data base
+2021-05-02 17:27:23  INFO com.shopapi.revature.dao.ProductDAOImpl:67 list all products completed
+2021-05-02 17:31:57  INFO com.shopapi.revature.controller.EmployeeApplication:32 user login function stared
+2021-05-02 17:32:08  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-02 17:32:08  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-02 17:32:08  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-02 17:32:11  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:53 list all offer made invoked
+2021-05-02 17:32:11  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:60 successfully connected to data base
+2021-05-02 17:32:11  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:84 list all offer made completed
+2021-05-02 17:32:27  INFO com.shopapi.revature.dao.ProductDAOImpl:47 list all products invoked
+2021-05-02 17:32:27  INFO com.shopapi.revature.dao.ProductDAOImpl:50 successfully connected to data base
+2021-05-02 17:32:27  INFO com.shopapi.revature.dao.ProductDAOImpl:67 list all products completed
+2021-05-02 17:34:07  INFO com.shopapi.revature.controller.EmployeeApplication:32 user login function stared
+2021-05-02 17:34:14  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-02 17:34:14  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-02 17:34:14  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-02 17:34:17  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:53 list all offer made invoked
+2021-05-02 17:34:17  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:60 successfully connected to data base
+2021-05-02 17:34:17  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:84 list all offer made completed
+2021-05-02 17:34:22  INFO com.shopapi.revature.dao.ProductDAOImpl:47 list all products invoked
+2021-05-02 17:34:22  INFO com.shopapi.revature.dao.ProductDAOImpl:50 successfully connected to data base
+2021-05-02 17:34:22  INFO com.shopapi.revature.dao.ProductDAOImpl:67 list all products completed
+2021-05-02 17:38:03  INFO com.shopapi.revature.controller.EmployeeApplication:32 user login function stared
+2021-05-02 17:38:08  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-02 17:38:08  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-02 17:38:08  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-02 17:38:10  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:53 list all offer made invoked
+2021-05-02 17:38:10  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:60 successfully connected to data base
+2021-05-02 17:38:10  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:84 list all offer made completed
+2021-05-02 17:38:13  INFO com.shopapi.revature.dao.ProductDAOImpl:47 list all products invoked
+2021-05-02 17:38:13  INFO com.shopapi.revature.dao.ProductDAOImpl:50 successfully connected to data base
+2021-05-02 17:38:13  INFO com.shopapi.revature.dao.ProductDAOImpl:67 list all products completed
+2021-05-02 17:40:17  INFO com.shopapi.revature.controller.EmployeeApplication:32 user login function stared
+2021-05-02 17:40:26  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-02 17:40:26  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-02 17:40:26  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-02 17:40:30  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:53 list all offer made invoked
+2021-05-02 17:40:30  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:60 successfully connected to data base
+2021-05-02 17:40:30  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:84 list all offer made completed
+2021-05-02 17:40:39  INFO com.shopapi.revature.dao.ProductDAOImpl:47 list all products invoked
+2021-05-02 17:40:39  INFO com.shopapi.revature.dao.ProductDAOImpl:50 successfully connected to data base
+2021-05-02 17:40:39  INFO com.shopapi.revature.dao.ProductDAOImpl:67 list all products completed
+2021-05-02 17:40:39  INFO com.shopapi.revature.dao.ProductDAOImpl:73 update product to the list invoked
+2021-05-02 17:40:39  INFO com.shopapi.revature.dao.ProductDAOImpl:75 successfully connected to data base
+2021-05-02 17:40:39  INFO com.shopapi.revature.dao.ProductDAOImpl:89 update product to the list completed
+2021-05-02 17:41:13  INFO com.shopapi.revature.dao.ProductDAOImpl:47 list all products invoked
+2021-05-02 17:41:13  INFO com.shopapi.revature.dao.ProductDAOImpl:50 successfully connected to data base
+2021-05-02 17:41:13  INFO com.shopapi.revature.dao.ProductDAOImpl:67 list all products completed
+2021-05-02 18:01:33  INFO com.shopapi.revature.controller.CustomerApplication:25 customer application portal started
+2021-05-02 18:01:40  INFO com.shopapi.revature.controller.CustomerApplication:53 user login function stared
+2021-05-02 18:01:49  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-02 18:01:49  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-02 18:01:49  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-02 18:01:49  INFO com.shopapi.revature.controller.CustomerApplication:63 user login success
+2021-05-02 18:01:49  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 18:01:49  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 18:01:49  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 18:01:49  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 18:01:49  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 18:01:49  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 18:02:02  INFO com.shopapi.revature.dao.ProductDAOImpl:47 list all products invoked
+2021-05-02 18:02:02  INFO com.shopapi.revature.dao.ProductDAOImpl:50 successfully connected to data base
+2021-05-02 18:02:02  INFO com.shopapi.revature.dao.ProductDAOImpl:67 list all products completed
+2021-05-02 18:02:47  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:30 add to offer table invoked
+2021-05-02 18:02:47  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:32 successfully connected to data base
+2021-05-02 18:02:47  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:47 offer successfull added to the offer table
+2021-05-02 18:03:00  INFO com.shopapi.revature.dao.PaymentDAOImpl:61 view all paymnent status invoked
+2021-05-02 18:03:00  INFO com.shopapi.revature.dao.PaymentDAOImpl:64 successfully connected to data base
+2021-05-02 18:03:00  INFO com.shopapi.revature.dao.PaymentDAOImpl:88 view all paymnent status invoked
+2021-05-02 18:05:03  INFO com.shopapi.revature.dao.PaymentDAOImpl:94 view remaining payment by order no
+2021-05-02 18:05:03  INFO com.shopapi.revature.dao.PaymentDAOImpl:97 successfully connected to data base
+2021-05-02 18:05:03  INFO com.shopapi.revature.dao.PaymentDAOImpl:116 view remaining payment by order no completed
+2021-05-02 18:05:08  INFO com.shopapi.revature.dao.PaymentDAOImpl:122 make payment method invoked
+2021-05-02 18:05:08  INFO com.shopapi.revature.dao.PaymentDAOImpl:124 successfully connected to data base
+2021-05-02 18:05:08  INFO com.shopapi.revature.dao.PaymentDAOImpl:138 make payment method completed
+2021-05-02 18:05:22  INFO com.shopapi.revature.dao.PaymentDAOImpl:61 view all paymnent status invoked
+2021-05-02 18:05:22  INFO com.shopapi.revature.dao.PaymentDAOImpl:64 successfully connected to data base
+2021-05-02 18:05:22  INFO com.shopapi.revature.dao.PaymentDAOImpl:88 view all paymnent status invoked
+2021-05-02 18:20:13  INFO com.shopapi.revature.controller.EmployeeApplication:32 user login function stared
+2021-05-02 18:20:25  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-02 18:20:25  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-02 18:20:25  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-02 18:20:33  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:53 list all offer made invoked
+2021-05-02 18:20:33  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:60 successfully connected to data base
+2021-05-02 18:20:33  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:84 list all offer made completed
+2021-05-02 20:01:25  INFO com.shopapi.revature.dao.UserDAOImpl:43 list user invoked
+2021-05-02 20:01:26  INFO com.shopapi.revature.dao.UserDAOImpl:47 successfully connected to data base
+2021-05-02 20:01:26  INFO com.shopapi.revature.dao.UserDAOImpl:63 list user completed
+2021-05-02 20:05:04  INFO com.shopapi.revature.dao.UserDAOImpl:43 list user invoked
+2021-05-02 20:05:04  INFO com.shopapi.revature.dao.UserDAOImpl:47 successfully connected to data base
+2021-05-02 20:05:04  INFO com.shopapi.revature.dao.UserDAOImpl:63 list user completed
+2021-05-02 20:10:52  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-02 20:10:53  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-02 20:10:53  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-02 20:10:53  INFO com.shopapi.revature.dao.UserDAOImpl:43 list user invoked
+2021-05-02 20:10:53  INFO com.shopapi.revature.dao.UserDAOImpl:47 successfully connected to data base
+2021-05-02 20:10:53  INFO com.shopapi.revature.dao.UserDAOImpl:63 list user completed
+2021-05-02 20:15:22  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:15:22  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:15:22  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:15:22  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:15:22  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:15:22  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:17:45  INFO com.shopapi.revature.dao.CustomerDAOImpl:24 add customer information invoked
+2021-05-02 20:17:45  INFO com.shopapi.revature.dao.CustomerDAOImpl:26 successfully connected to data base
+2021-05-02 20:17:45  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:17:45  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:17:45  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:17:45  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:17:45  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:17:45  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:18:30  INFO com.shopapi.revature.dao.CustomerDAOImpl:24 add customer information invoked
+2021-05-02 20:18:31  INFO com.shopapi.revature.dao.CustomerDAOImpl:26 successfully connected to data base
+2021-05-02 20:18:31  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:18:31  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:18:31  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:18:31  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:18:31  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:18:31  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:19:26  INFO com.shopapi.revature.dao.CustomerDAOImpl:24 add customer information invoked
+2021-05-02 20:19:27  INFO com.shopapi.revature.dao.CustomerDAOImpl:26 successfully connected to data base
+2021-05-02 20:19:27  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:19:27  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:19:27  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:19:27  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:19:27  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:19:27  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:20:01  INFO com.shopapi.revature.dao.CustomerDAOImpl:24 add customer information invoked
+2021-05-02 20:20:01  INFO com.shopapi.revature.dao.CustomerDAOImpl:26 successfully connected to data base
+2021-05-02 20:20:01  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:20:02  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:20:02  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:20:02  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:20:02  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:20:02  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:21:14  INFO com.shopapi.revature.dao.CustomerDAOImpl:24 add customer information invoked
+2021-05-02 20:21:14  INFO com.shopapi.revature.dao.CustomerDAOImpl:26 successfully connected to data base
+2021-05-02 20:21:14  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:21:14  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:21:14  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:21:14  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:21:14  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:21:14  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:22:50  INFO com.shopapi.revature.dao.CustomerDAOImpl:24 add customer information invoked
+2021-05-02 20:22:50  INFO com.shopapi.revature.dao.CustomerDAOImpl:26 successfully connected to data base
+2021-05-02 20:22:50  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:22:50  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:22:50  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:22:50  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:22:50  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:22:50  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:23:19  INFO com.shopapi.revature.dao.CustomerDAOImpl:24 add customer information invoked
+2021-05-02 20:23:20  INFO com.shopapi.revature.dao.CustomerDAOImpl:26 successfully connected to data base
+2021-05-02 20:23:20  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:23:20  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:23:20  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:23:20  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:23:20  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:23:20  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:24:43  INFO com.shopapi.revature.dao.CustomerDAOImpl:24 add customer information invoked
+2021-05-02 20:24:43  INFO com.shopapi.revature.dao.CustomerDAOImpl:26 successfully connected to data base
+2021-05-02 20:24:43  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:24:43  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:24:43  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:24:43  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:24:43  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:24:43  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:27:06  INFO com.shopapi.revature.dao.CustomerDAOImpl:24 add customer information invoked
+2021-05-02 20:27:06  INFO com.shopapi.revature.dao.CustomerDAOImpl:26 successfully connected to data base
+2021-05-02 20:27:06  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:27:06  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:27:06  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:27:06  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:27:06  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:27:06  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:27:06  INFO com.shopapi.revature.dao.ProductDAOImpl:47 list all products invoked
+2021-05-02 20:27:06  INFO com.shopapi.revature.dao.ProductDAOImpl:50 successfully connected to data base
+2021-05-02 20:27:07  INFO com.shopapi.revature.dao.ProductDAOImpl:67 list all products completed
+2021-05-02 20:29:12  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:30 add to offer table invoked
+2021-05-02 20:29:12  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:32 successfully connected to data base
+2021-05-02 20:29:12  INFO com.shopapi.revature.dao.CustomerDAOImpl:24 add customer information invoked
+2021-05-02 20:29:12  INFO com.shopapi.revature.dao.CustomerDAOImpl:26 successfully connected to data base
+2021-05-02 20:29:12  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:29:12  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:29:12  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:29:12  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:29:12  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:29:12  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:29:12  INFO com.shopapi.revature.dao.ProductDAOImpl:47 list all products invoked
+2021-05-02 20:29:12  INFO com.shopapi.revature.dao.ProductDAOImpl:50 successfully connected to data base
+2021-05-02 20:29:12  INFO com.shopapi.revature.dao.ProductDAOImpl:67 list all products completed
+2021-05-02 20:32:04  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:30 add to offer table invoked
+2021-05-02 20:32:04  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:32 successfully connected to data base
+2021-05-02 20:32:04  INFO com.shopapi.revature.dao.CustomerDAOImpl:24 add customer information invoked
+2021-05-02 20:32:04  INFO com.shopapi.revature.dao.CustomerDAOImpl:26 successfully connected to data base
+2021-05-02 20:32:04  INFO com.shopapi.revature.dao.ProductDAOImpl:112 list all products owned invoked
+2021-05-02 20:32:04  INFO com.shopapi.revature.dao.ProductDAOImpl:115 successfully connected to data base
+2021-05-02 20:32:04  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:32:04  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:32:04  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:32:04  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:32:04  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:32:04  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:32:04  INFO com.shopapi.revature.dao.ProductDAOImpl:47 list all products invoked
+2021-05-02 20:32:05  INFO com.shopapi.revature.dao.ProductDAOImpl:50 successfully connected to data base
+2021-05-02 20:32:05  INFO com.shopapi.revature.dao.ProductDAOImpl:67 list all products completed
+2021-05-02 20:33:24  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:30 add to offer table invoked
+2021-05-02 20:33:24  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:32 successfully connected to data base
+2021-05-02 20:33:24  INFO com.shopapi.revature.dao.CustomerDAOImpl:24 add customer information invoked
+2021-05-02 20:33:24  INFO com.shopapi.revature.dao.CustomerDAOImpl:26 successfully connected to data base
+2021-05-02 20:33:24  INFO com.shopapi.revature.dao.ProductDAOImpl:112 list all products owned invoked
+2021-05-02 20:33:24  INFO com.shopapi.revature.dao.ProductDAOImpl:115 successfully connected to data base
+2021-05-02 20:33:24  INFO com.shopapi.revature.dao.ProductDAOImpl:136 list all products owned completed
+2021-05-02 20:33:24  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:33:24  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:33:24  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:33:24  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:33:24  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:33:24  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:33:24  INFO com.shopapi.revature.dao.ProductDAOImpl:47 list all products invoked
+2021-05-02 20:33:24  INFO com.shopapi.revature.dao.ProductDAOImpl:50 successfully connected to data base
+2021-05-02 20:33:24  INFO com.shopapi.revature.dao.ProductDAOImpl:67 list all products completed
+2021-05-02 20:37:33  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:30 add to offer table invoked
+2021-05-02 20:37:33  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:32 successfully connected to data base
+2021-05-02 20:37:33  INFO com.shopapi.revature.dao.CustomerDAOImpl:24 add customer information invoked
+2021-05-02 20:37:33  INFO com.shopapi.revature.dao.CustomerDAOImpl:26 successfully connected to data base
+2021-05-02 20:37:33  INFO com.shopapi.revature.dao.ProductDAOImpl:112 list all products owned invoked
+2021-05-02 20:37:33  INFO com.shopapi.revature.dao.ProductDAOImpl:115 successfully connected to data base
+2021-05-02 20:37:33  INFO com.shopapi.revature.dao.ProductDAOImpl:136 list all products owned completed
+2021-05-02 20:37:33  INFO com.shopapi.revature.dao.PaymentDAOImpl:61 view all paymnent status invoked
+2021-05-02 20:37:33  INFO com.shopapi.revature.dao.PaymentDAOImpl:64 successfully connected to data base
+2021-05-02 20:37:33  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:37:33  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:37:33  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:37:33  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:37:34  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:37:34  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:37:34  INFO com.shopapi.revature.dao.ProductDAOImpl:47 list all products invoked
+2021-05-02 20:37:34  INFO com.shopapi.revature.dao.ProductDAOImpl:50 successfully connected to data base
+2021-05-02 20:37:34  INFO com.shopapi.revature.dao.ProductDAOImpl:67 list all products completed
+2021-05-02 20:42:05  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:30 add to offer table invoked
+2021-05-02 20:42:05  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:32 successfully connected to data base
+2021-05-02 20:42:05  INFO com.shopapi.revature.dao.CustomerDAOImpl:24 add customer information invoked
+2021-05-02 20:42:05  INFO com.shopapi.revature.dao.CustomerDAOImpl:26 successfully connected to data base
+2021-05-02 20:42:05  INFO com.shopapi.revature.dao.PaymentDAOImpl:94 view remaining payment by order no
+2021-05-02 20:42:05  INFO com.shopapi.revature.dao.PaymentDAOImpl:97 successfully connected to data base
+2021-05-02 20:42:05  INFO com.shopapi.revature.dao.PaymentDAOImpl:116 view remaining payment by order no completed
+2021-05-02 20:42:05  INFO com.shopapi.revature.dao.ProductDAOImpl:112 list all products owned invoked
+2021-05-02 20:42:06  INFO com.shopapi.revature.dao.ProductDAOImpl:115 successfully connected to data base
+2021-05-02 20:42:06  INFO com.shopapi.revature.dao.ProductDAOImpl:136 list all products owned completed
+2021-05-02 20:42:06  INFO com.shopapi.revature.dao.PaymentDAOImpl:61 view all paymnent status invoked
+2021-05-02 20:42:06  INFO com.shopapi.revature.dao.PaymentDAOImpl:64 successfully connected to data base
+2021-05-02 20:42:06  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:42:06  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:42:06  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:42:06  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:42:06  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:42:06  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:42:06  INFO com.shopapi.revature.dao.ProductDAOImpl:47 list all products invoked
+2021-05-02 20:42:06  INFO com.shopapi.revature.dao.ProductDAOImpl:50 successfully connected to data base
+2021-05-02 20:42:06  INFO com.shopapi.revature.dao.ProductDAOImpl:67 list all products completed
+2021-05-02 20:44:57  INFO com.shopapi.revature.dao.PaymentDAOImpl:122 make payment method invoked
+2021-05-02 20:44:57  INFO com.shopapi.revature.dao.PaymentDAOImpl:124 successfully connected to data base
+2021-05-02 20:44:57  INFO com.shopapi.revature.dao.PaymentDAOImpl:138 make payment method completed
+2021-05-02 20:44:57  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:30 add to offer table invoked
+2021-05-02 20:44:57  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:32 successfully connected to data base
+2021-05-02 20:44:57  INFO com.shopapi.revature.dao.CustomerDAOImpl:24 add customer information invoked
+2021-05-02 20:44:57  INFO com.shopapi.revature.dao.CustomerDAOImpl:26 successfully connected to data base
+2021-05-02 20:44:57  INFO com.shopapi.revature.dao.PaymentDAOImpl:94 view remaining payment by order no
+2021-05-02 20:44:57  INFO com.shopapi.revature.dao.PaymentDAOImpl:97 successfully connected to data base
+2021-05-02 20:44:57  INFO com.shopapi.revature.dao.PaymentDAOImpl:116 view remaining payment by order no completed
+2021-05-02 20:44:57  INFO com.shopapi.revature.dao.ProductDAOImpl:112 list all products owned invoked
+2021-05-02 20:44:57  INFO com.shopapi.revature.dao.ProductDAOImpl:115 successfully connected to data base
+2021-05-02 20:44:57  INFO com.shopapi.revature.dao.ProductDAOImpl:136 list all products owned completed
+2021-05-02 20:44:57  INFO com.shopapi.revature.dao.PaymentDAOImpl:61 view all paymnent status invoked
+2021-05-02 20:44:57  INFO com.shopapi.revature.dao.PaymentDAOImpl:64 successfully connected to data base
+2021-05-02 20:44:57  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:44:57  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:44:57  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:44:57  INFO com.shopapi.revature.dao.CustomerDAOImpl:65 get customer by login id invoked
+2021-05-02 20:44:57  INFO com.shopapi.revature.dao.CustomerDAOImpl:68 successfully connected to data base
+2021-05-02 20:44:57  INFO com.shopapi.revature.dao.CustomerDAOImpl:86 get customer by login id completed
+2021-05-02 20:44:57  INFO com.shopapi.revature.dao.ProductDAOImpl:47 list all products invoked
+2021-05-02 20:44:57  INFO com.shopapi.revature.dao.ProductDAOImpl:50 successfully connected to data base
+2021-05-02 20:44:57  INFO com.shopapi.revature.dao.ProductDAOImpl:67 list all products completed

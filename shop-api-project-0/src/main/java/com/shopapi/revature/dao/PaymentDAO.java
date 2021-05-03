@@ -8,4 +8,6 @@ public interface PaymentDAO {
 	
 	public List<AccountCollection> viewAllPayment();
 	public List<AccountCollection> viewAllPaymentForCustomer(AccountCollection customer);
+	public AccountCollection viewRemainingPayment(int order_no);
+	public boolean makePayment(int order_no, double amount);
 }
