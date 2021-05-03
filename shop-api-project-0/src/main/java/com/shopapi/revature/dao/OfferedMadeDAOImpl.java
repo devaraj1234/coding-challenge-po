@@ -98,10 +98,12 @@ public class OfferedMadeDAOImpl implements OfferMadeDAO {
 	}
 
 	public boolean acceptOffer(OfferedMade offer) {
+		log.info("accept offer by offer id invoked");
 		boolean isAccepted = false;
 		Connection conn = null;
 		try {
 			conn = ConnectionUtility.getConnection();
+			log.info("successfull connected to database");
 			conn.setAutoCommit(false);
 			String query = "begin transaction; "
 					+ "update shopapi.offer_made set product_offer_status = 'rejected' where offer_product = ?; "
@@ -111,8 +113,7 @@ public class OfferedMadeDAOImpl implements OfferMadeDAO {
 					+ "from shopapi.offer_made where offer_no = ?; "
 					+ "insert into shopapi.account_collection (product_order_no, offered_price_per_unit, total_price, payment_made, remaining_payment, payment_date) "
 					+ "select offer_no, offered_price_per_unit, (offered_quantity*offered_price_per_unit), payment_made, ((offered_quantity*offered_price_per_unit)-payment_made), product_offer_date "
-					+ "from shopapi.offer_made where offer_no = ?; " 
-					+ "commit;";
+					+ "from shopapi.offer_made where offer_no = ?; " + "commit;";
 			ps = conn.prepareStatement(query);
 			ps.setInt(1, offer.getProduct().getProduct_id());
 			ps.setInt(2, offer.getOffer_no());
@@ -121,6 +122,7 @@ public class OfferedMadeDAOImpl implements OfferMadeDAO {
 			ps.executeUpdate();
 			isAccepted = true;
 		} catch (SQLException e) {
+			log.debug("accept offer by offer id failed");
 			e.printStackTrace();
 			return false;
 		} finally {
@@ -130,6 +132,25 @@ public class OfferedMadeDAOImpl implements OfferMadeDAO {
 				e.printStackTrace();
 			}
 		}
+		log.info("accept offer method comleted successfully");
 		return isAccepted;
+	}
+
+	@Override
+	public boolean rejectOffer(int offer_no) {
+		log.info("reject offer invoked");
+		try (Connection conn = ConnectionUtility.getConnection()) {
+			log.info("successfully connected to database");
+			ps = conn.prepareStatement(
+					"update shopapi.offer_made set product_offer_status = 'rejected' where offer_no = ?");
+			ps.setInt(1, offer_no);
+			ps.executeUpdate();
+			log.info("offer rejected successfully");
+			return true;
+		} catch (SQLException e) {
+			log.debug("reject offer failed");
+			e.printStackTrace();
+			return false;
+		}
 	}
 }

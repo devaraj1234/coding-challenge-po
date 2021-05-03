@@ -787,3 +787,20 @@
 2021-05-03 16:29:13  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
 2021-05-03 16:29:13  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
 2021-05-03 16:29:13  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-03 16:32:55  INFO com.shopapi.revature.controller.EmployeeApplication:32 user login function stared
+2021-05-03 16:33:01  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-03 16:33:01  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-03 16:33:01  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-03 16:45:55  INFO com.shopapi.revature.controller.EmployeeApplication:32 user login function stared
+2021-05-03 16:46:00  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-03 16:46:00  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-03 16:46:00  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-03 16:46:04  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:53 list all offer made invoked
+2021-05-03 16:46:04  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:60 successfully connected to data base
+2021-05-03 16:46:04  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:84 list all offer made completed
+2021-05-03 16:46:32  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:53 list all offer made invoked
+2021-05-03 16:46:32  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:60 successfully connected to data base
+2021-05-03 16:46:32  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:84 list all offer made completed
+2021-05-03 16:46:54  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:53 list all offer made invoked
+2021-05-03 16:46:54  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:60 successfully connected to data base
+2021-05-03 16:46:54  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:84 list all offer made completed

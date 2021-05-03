@@ -99,12 +99,10 @@ public class EmployeeApplication {
 							}
 							System.out.println("----------------------------------------------------------------");
 							offerloop: while (true) {
-								System.out.println(
-										"\nEnter 1 to Accept offer \nEnter 2 to Reject Offer \nEnter 'q' to Exit \nEnter here: ");
 								String offerMenu = scan.next();
 								switch (offerMenu) {
 								case "1": {
-									System.out.println("Enter product id : ");
+									System.out.println("Enter product id to view by product: ");
 									int product_id = scan.nextInt();
 									System.out.println("List of offers for priduct id " + product_id + ":");
 									System.out.println(
@@ -123,16 +121,21 @@ public class EmployeeApplication {
 													+ offer.getOffer_status());
 										}
 									}
-									System.out.println("----------------------------------------------------------------");
-									System.out.println("Enter offer no to accept offer: ");
-									int offer_no = scan.nextInt();
-									employeeService.acceptOffer(new OfferedMade(offer_no, new Product(product_id)));
-									break offerloop;
-								}
-								case "2": {
-									System.out.println("Enter offer no to Reject Offer: ");
-									int offer_no = scan.nextInt();
+									System.out.println(
+											"----------------------------------------------------------------");
 
+									System.out.println(
+											"\nEnter 1 to Accept Offer \nEnter 2 to Reject Offer \nEnter q to Exit \nEnter Here:");
+									String employeeInput = scan.next();
+									if (employeeInput.equals("1")) {
+										System.out.println("Enter offer no to accept offer: ");
+										int offer_no = scan.nextInt();
+										employeeService.acceptOffer(new OfferedMade(offer_no, new Product(product_id)));
+									} else if (employeeInput.equals("2")) {
+										System.out.println("Enter offer no to accept offer: ");
+										int offer_no = scan.nextInt();
+										employeeService.rejectOffer(offer_no);										
+									}
 									break offerloop;
 								}
 								case "q":
@@ -153,8 +156,8 @@ public class EmployeeApplication {
 										+ accountColl.getproduct_owner().getProduct_owner().getCustomer_fname() + " "
 										+ accountColl.getproduct_owner().getProduct_owner().getCustomer_lname()
 										+ "\t\tTotal Price: " + accountColl.getTotal_price()
-										+ accountColl.getPayment_made() + "\tPayment Date: "
-										+ "\tPayment Received : " + accountColl.getPayment_date() + "\tRemaining Balance: "
+										+ accountColl.getPayment_made() + "\tPayment Date: " + "\tPayment Received : "
+										+ accountColl.getPayment_date() + "\tRemaining Balance: "
 										+ accountColl.getRemaining_balance());
 							}
 							System.out.println("---------------------------------------------------------------------");

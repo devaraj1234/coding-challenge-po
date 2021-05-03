@@ -78,5 +78,9 @@ public class EmployeeService {
 	public List<AccountCollection> viewAllPaymentMade() {
 		return paymentDAO.viewAllPayment();
 	}
+	
+	public boolean rejectOffer(int offer_id) {
+		return offerMadeDAO.rejectOffer(offer_id);
+	}
 
 }
