@@ -15,6 +15,7 @@ import com.shopapi.revature.model.AccountCollection;
 import com.shopapi.revature.model.Customer;
 import com.shopapi.revature.model.Product;
 import com.shopapi.revature.model.ProductOwner;
+import com.shopapi.revature.model.WeeklyCollection;
 import com.shopapi.revature.utility.ConnectionUtility;
 
 public class PaymentDAOImpl implements PaymentDAO {
@@ -101,8 +102,7 @@ public class PaymentDAOImpl implements PaymentDAO {
 			rs = ps.executeQuery();
 			while (rs.next()) {
 				payment.setCollection_id(rs.getInt("collection_id"));
-				payment.setproduct_owner(
-						new ProductOwner(rs.getInt("product_order_no"), null));
+				payment.setproduct_owner(new ProductOwner(rs.getInt("product_order_no"), null));
 				payment.setTotal_price(rs.getDouble("total_price"));
 				payment.setPayment_made(rs.getDouble("payment_made"));
 				payment.setPayment_date(rs.getDate("payment_date"));
@@ -137,6 +137,34 @@ public class PaymentDAOImpl implements PaymentDAO {
 		}
 		log.info("make payment method completed");
 		return true;
+	}
+
+	@Override
+	public List<WeeklyCollection> getWeeklyCollection() {
+		log.info("get weekly collection invoked");
+		List<WeeklyCollection> weeklyCollections = new ArrayList<>();
+		try (Connection conn = ConnectionUtility.getConnection()) {
+			log.info("successfully connected to data base");
+			String query = "SELECT date_trunc('week', payment_date) as week_of, date_part('week', payment_date) as week_number, sum(payment_made ) as weekly_collection "
+					+ "FROM   shopapi.account_collection "
+					+ "group by date_trunc('week', payment_date), date_part('week', payment_date);";
+			stmt = conn.createStatement();
+			rs = stmt.executeQuery(query);
+			while (rs.next()) {
+				WeeklyCollection weeklyCollection = new WeeklyCollection();
+				weeklyCollection.setWeek_Start_Date(rs.getDate("week_of"));
+				weeklyCollection.setWeek_number(rs.getInt("week_number"));
+				weeklyCollection.setWeekly_collection(rs.getDouble("weekly_collection"));
+				weeklyCollections.add(weeklyCollection);
+			}
+
+		} catch (SQLException e) {
+			log.debug("get weekly collection failed");
+			e.printStackTrace();
+			return null;
+		}
+		log.info("get weekly collection completed");
+		return weeklyCollections;
 	}
 
 }

@@ -11,6 +11,7 @@ import com.shopapi.revature.model.LoginDetails;
 import com.shopapi.revature.model.OfferedMade;
 import com.shopapi.revature.model.Product;
 import com.shopapi.revature.model.User;
+import com.shopapi.revature.model.WeeklyCollection;
 import com.shopapi.revature.service.CommonService;
 import com.shopapi.revature.service.EmployeeService;
 
@@ -161,6 +162,16 @@ public class EmployeeApplication {
 										+ accountColl.getRemaining_balance());
 							}
 							System.out.println("---------------------------------------------------------------------");
+							System.out.println("\nEnter 1 to view Weekly Collection \nEnter q for Exit \nEnter Here: ");
+							String weekCollection = scan.next();
+							if(weekCollection.equals("1")) {
+								List<WeeklyCollection> weeklyCollections = employeeService.getWeeklyCollection();
+								System.out.println("\nWeekly Collection Detail: ");
+								for(WeeklyCollection weeklyCollection : weeklyCollections) {
+									System.out.println(weeklyCollection);
+									
+								}
+							}
 							break employeeSelection;
 						}
 
@@ -191,7 +202,7 @@ public class EmployeeApplication {
 
 	public static void employeeInstruction() {
 		System.out.println(
-				"\nEnter 1 to add products \nEnter 2 to view all products \nEnter 3 to remove products \nEnter 4 to view offers \nEnter 5 to view all paymnets");
+				"\nEnter 1 to add products \nEnter 2 to view all products \nEnter 3 to remove products \nEnter 4 to view offers \nEnter 5 to view all collection");
 		System.out.println("Enter 'q' for Exit");
 		System.out.println("Enter Here: ");
 

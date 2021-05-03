@@ -9,6 +9,7 @@ import com.shopapi.revature.dao.ProductDAOImpl;
 import com.shopapi.revature.model.AccountCollection;
 import com.shopapi.revature.model.OfferedMade;
 import com.shopapi.revature.model.Product;
+import com.shopapi.revature.model.WeeklyCollection;
 
 public class EmployeeService {
 
@@ -81,6 +82,10 @@ public class EmployeeService {
 	
 	public boolean rejectOffer(int offer_id) {
 		return offerMadeDAO.rejectOffer(offer_id);
+	}
+	
+	public List<WeeklyCollection> getWeeklyCollection(){
+		return paymentDAO.getWeeklyCollection();
 	}
 
 }

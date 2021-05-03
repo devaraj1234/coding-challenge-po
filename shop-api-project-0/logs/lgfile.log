@@ -804,3 +804,13 @@
 2021-05-03 16:46:54  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:53 list all offer made invoked
 2021-05-03 16:46:54  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:60 successfully connected to data base
 2021-05-03 16:46:54  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:84 list all offer made completed
+2021-05-03 18:39:21  INFO com.shopapi.revature.controller.EmployeeApplication:33 user login function stared
+2021-05-03 18:39:27  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-03 18:39:27  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-03 18:39:27  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-03 18:40:28  INFO com.shopapi.revature.dao.PaymentDAOImpl:30 view all payments invoked
+2021-05-03 18:40:28  INFO com.shopapi.revature.dao.PaymentDAOImpl:33 successfully connected to data base
+2021-05-03 18:40:28  INFO com.shopapi.revature.dao.PaymentDAOImpl:56 view all payments completed
+2021-05-03 18:40:44  INFO com.shopapi.revature.dao.PaymentDAOImpl:144 get weekly collection invoked
+2021-05-03 18:40:44  INFO com.shopapi.revature.dao.PaymentDAOImpl:147 successfully connected to data base
+2021-05-03 18:40:44  INFO com.shopapi.revature.dao.PaymentDAOImpl:166 get weekly collection completed
