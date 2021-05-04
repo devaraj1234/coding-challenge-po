@@ -814,3 +814,25 @@
 2021-05-03 18:40:44  INFO com.shopapi.revature.dao.PaymentDAOImpl:144 get weekly collection invoked
 2021-05-03 18:40:44  INFO com.shopapi.revature.dao.PaymentDAOImpl:147 successfully connected to data base
 2021-05-03 18:40:44  INFO com.shopapi.revature.dao.PaymentDAOImpl:166 get weekly collection completed
+2021-05-03 18:53:24  INFO com.shopapi.revature.dao.ProductDAOImpl:47 list all products invoked
+2021-05-03 18:53:24  INFO com.shopapi.revature.dao.ProductDAOImpl:50 successfully connected to data base
+2021-05-03 18:53:24  INFO com.shopapi.revature.dao.ProductDAOImpl:67 list all products completed
+2021-05-03 18:58:25  INFO com.shopapi.revature.dao.ProductDAOImpl:95 delete product from the list invoked
+2021-05-03 18:58:25  INFO com.shopapi.revature.dao.ProductDAOImpl:97 successfully connected to data base
+2021-05-03 18:58:25  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:53 list all offer made invoked
+2021-05-03 18:58:25  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:60 successfully connected to data base
+2021-05-03 18:58:25  INFO com.shopapi.revature.dao.OfferedMadeDAOImpl:84 list all offer made completed
+2021-05-03 18:58:25  INFO com.shopapi.revature.dao.PaymentDAOImpl:30 view all payments invoked
+2021-05-03 18:58:25  INFO com.shopapi.revature.dao.PaymentDAOImpl:33 successfully connected to data base
+2021-05-03 18:58:25  INFO com.shopapi.revature.dao.PaymentDAOImpl:56 view all payments completed
+2021-05-03 18:58:25  INFO com.shopapi.revature.dao.ProductDAOImpl:27 add product to the list invoked
+2021-05-03 18:58:26  INFO com.shopapi.revature.dao.ProductDAOImpl:29 successfully connected to data base
+2021-05-03 18:58:26  INFO com.shopapi.revature.dao.ProductDAOImpl:41 add product to the list completed
+2021-05-03 18:58:26  INFO com.shopapi.revature.dao.ProductDAOImpl:27 add product to the list invoked
+2021-05-03 18:58:26  INFO com.shopapi.revature.dao.ProductDAOImpl:29 successfully connected to data base
+2021-05-03 18:58:26  INFO com.shopapi.revature.dao.ProductDAOImpl:47 list all products invoked
+2021-05-03 18:58:26  INFO com.shopapi.revature.dao.ProductDAOImpl:50 successfully connected to data base
+2021-05-03 18:58:26  INFO com.shopapi.revature.dao.ProductDAOImpl:67 list all products completed
+2021-05-03 18:58:26  INFO com.shopapi.revature.dao.ProductDAOImpl:47 list all products invoked
+2021-05-03 18:58:26  INFO com.shopapi.revature.dao.ProductDAOImpl:50 successfully connected to data base
+2021-05-03 18:58:26  INFO com.shopapi.revature.dao.ProductDAOImpl:67 list all products completed
