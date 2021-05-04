@@ -73,6 +73,15 @@ public class ManagerApplication {
 								break managerSelection;
 							}
 							case "2": {
+								System.out.println("Enter employee id to remove Employee record");
+								int employee_id = scan.nextInt();
+								boolean removeEmployee = managerService.removeEmployee(employee_id);
+								if(removeEmployee == true) {
+									System.out.println("employee record removed successfully");
+								}
+								else {
+									System.out.println("can not removed employee record");
+								}
 
 								break managerSelection;
 							}

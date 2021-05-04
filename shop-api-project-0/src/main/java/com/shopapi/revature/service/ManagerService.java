@@ -10,5 +10,9 @@ public class ManagerService {
 		return empDAO.addEmployee(employee);
 	}
 	
+	public boolean removeEmployee(int employee_id) {
+		return empDAO.removeEmployee(employee_id);
+	}
+	
 
 }

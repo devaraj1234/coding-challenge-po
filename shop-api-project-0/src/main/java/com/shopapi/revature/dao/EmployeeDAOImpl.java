@@ -58,9 +58,21 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	}
 
 	@Override
-	public boolean removeEmployee(Employee employee) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean removeEmployee(int employee_id) {
+		log.info("remove employee record method invoked");
+		try (Connection conn = ConnectionUtility.getConnection()){
+			log.info("successfully connected to data base");
+			String query = "delete from shopapi.employees where employee_id = ?";
+			ps = conn.prepareStatement(query);
+			ps.setInt(1, employee_id);
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			log.debug("add employee details failed");
+			e.printStackTrace();
+			return false;
+		}
+		log.info("remove employee record method completed");
+		return true;
 	}
 
 }
