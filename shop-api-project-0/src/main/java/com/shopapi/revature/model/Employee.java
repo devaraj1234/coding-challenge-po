@@ -2,7 +2,7 @@ package com.shopapi.revature.model;
 
 public class Employee {
 
-	private int employee_id;
+	private Integer employee_id;
 	private String employee_fname;
 	private String employee_lname;
 	private String employee_email;
@@ -12,7 +12,7 @@ public class Employee {
 	public Employee() {
 	}
 
-	public Employee(int employee_id, String employee_fname, String employee_lname, String employee_email,
+	public Employee(Integer employee_id, String employee_fname, String employee_lname, String employee_email,
 			String employee_position, LoginDetails login) {
 		super();
 		this.employee_id = employee_id;
@@ -23,11 +23,11 @@ public class Employee {
 		this.login = login;
 	}
 
-	public int getEmployee_id() {
+	public Integer getEmployee_id() {
 		return employee_id;
 	}
 
-	public void setEmployee_id(int employee_id) {
+	public void setEmployee_id(Integer employee_id) {
 		this.employee_id = employee_id;
 	}
 

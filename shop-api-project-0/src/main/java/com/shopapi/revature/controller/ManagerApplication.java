@@ -6,9 +6,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.shopapi.revature.Exceptions.InvalidLoginException;
+import com.shopapi.revature.model.Employee;
 import com.shopapi.revature.model.LoginDetails;
 import com.shopapi.revature.model.User;
 import com.shopapi.revature.service.CommonService;
+import com.shopapi.revature.service.ManagerService;
 
 public class ManagerApplication {
 
@@ -17,6 +19,7 @@ public class ManagerApplication {
 	public static void managerialActivities() {
 		System.out.println("Welcome to Manager Portal of XYZ Auction Inc..!!!!!!!!!!!!!!!");
 		CommonService commonService = new CommonService();
+		ManagerService managerService = new ManagerService();
 		final String user = "manager";
 		Scanner scan = MainSimulator.scan;
 		loop: while (true) {
@@ -40,10 +43,32 @@ public class ManagerApplication {
 								+ login.getUser_role().getUser_role());
 						System.out.println("---------------------------------------------------------------------");
 						managerloop: while (true) {
-							// employeeInstruction();
+							managerInstruction();
 							String employeeMenu = scan.next();
 							managerSelection: switch (employeeMenu) {
 							case "1": {
+								System.out.println("Enter Employee First Name: ");
+								String fname = scan.next();
+								System.out.println("Enter Employee Last Name: ");
+								String lname = scan.next();
+								System.out.println("Enter Employee Email: ");
+								String email = scan.next();
+								System.out.println("Enter Employee Position: ");
+								String position = scan.next();
+								System.out.println("Enter Login User Name for Employee: ");
+								String loginUser = scan.next();
+								System.out.println("Enter initial Login Password for Employee: ");
+								String initialPassword = scan.next();
+								final String emp_role = "employee";
+								int userId = commonService.getUserId(emp_role);
+								
+								boolean addEmployee = managerService.addEmployee(new Employee(null, fname, lname, email, position,
+										new LoginDetails(null, loginUser, initialPassword, new User(userId, null))));
+								if(addEmployee == true) {
+									System.out.println("successfully added a employee");
+								}else {
+									System.out.println("add employee to database failed");
+								}
 
 								break managerSelection;
 							}
@@ -55,14 +80,7 @@ public class ManagerApplication {
 
 								break managerSelection;
 							}
-							case "4": {
 
-								break managerSelection;
-							}
-							case "5": {
-
-								break managerSelection;
-							}
 							default:
 								System.out.println("Wrong Input!!!!!!! Try Again");
 								break managerSelection;
@@ -95,5 +113,12 @@ public class ManagerApplication {
 		System.out.println("\nEnter 1 for Login");
 		System.out.println("Enter 'q' for Exit");
 		System.out.println("Enter Here: ");
+	}
+
+	public static void managerInstruction() {
+		System.out.println("\nEnter 1 add Employees \nEnter 2 to Remove Employee \nEnter 3 view Sales history");
+		System.out.println("Enter 'q' for Exit");
+		System.out.println("Enter Here: ");
+
 	}
 }

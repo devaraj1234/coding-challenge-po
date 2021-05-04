@@ -111,7 +111,7 @@ public class CustomerApplication {
 									offerloop: while (true) {
 										System.out.println("\nEnter 1 to make offer \nEnter q to Exit \nEnter Here: ");
 										String offerMenu = scan.next();
-										offerMenu: switch (offerMenu) {
+										switch (offerMenu) {
 										case "1": {
 											System.out.println("Enter Product id to make offer: ");
 											int product_id = scan.nextInt();

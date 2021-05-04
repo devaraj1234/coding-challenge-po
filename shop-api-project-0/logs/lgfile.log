@@ -836,3 +836,47 @@
 2021-05-03 18:58:26  INFO com.shopapi.revature.dao.ProductDAOImpl:47 list all products invoked
 2021-05-03 18:58:26  INFO com.shopapi.revature.dao.ProductDAOImpl:50 successfully connected to data base
 2021-05-03 18:58:26  INFO com.shopapi.revature.dao.ProductDAOImpl:67 list all products completed
+2021-05-03 20:41:11  INFO com.shopapi.revature.controller.ManagerApplication:31 user login function stared
+2021-05-03 20:41:29  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-03 20:41:29  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-03 20:41:29  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-03 20:42:29  INFO com.shopapi.revature.dao.UserDAOImpl:43 list user invoked
+2021-05-03 20:42:29  INFO com.shopapi.revature.dao.UserDAOImpl:47 successfully connected to data base
+2021-05-03 20:42:29  INFO com.shopapi.revature.dao.UserDAOImpl:63 list user completed
+2021-05-03 20:42:29  INFO com.shopapi.revature.dao.EmployeeDAOImpl:24 add employee details invoked
+2021-05-03 20:42:29  INFO com.shopapi.revature.dao.EmployeeDAOImpl:29 successfully connected to data base
+2021-05-03 20:42:29  DEBUG com.shopapi.revature.dao.EmployeeDAOImpl:44 add employee details failed
+2021-05-03 20:46:35  INFO com.shopapi.revature.controller.ManagerApplication:31 user login function stared
+2021-05-03 20:46:43  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-03 20:46:43  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-03 20:46:43  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-03 20:47:27  INFO com.shopapi.revature.dao.UserDAOImpl:43 list user invoked
+2021-05-03 20:47:27  INFO com.shopapi.revature.dao.UserDAOImpl:47 successfully connected to data base
+2021-05-03 20:47:27  INFO com.shopapi.revature.dao.UserDAOImpl:63 list user completed
+2021-05-03 20:47:27  INFO com.shopapi.revature.dao.EmployeeDAOImpl:24 add employee details invoked
+2021-05-03 20:47:27  INFO com.shopapi.revature.dao.EmployeeDAOImpl:29 successfully connected to data base
+2021-05-03 20:47:27  DEBUG com.shopapi.revature.dao.EmployeeDAOImpl:47 add employee details failed
+2021-05-03 20:57:54  INFO com.shopapi.revature.dao.UserDAOImpl:43 list user invoked
+2021-05-03 20:57:54  INFO com.shopapi.revature.dao.UserDAOImpl:47 successfully connected to data base
+2021-05-03 20:57:54  INFO com.shopapi.revature.dao.UserDAOImpl:63 list user completed
+2021-05-03 20:57:54  INFO com.shopapi.revature.dao.EmployeeDAOImpl:24 add employee details invoked
+2021-05-03 20:57:54  INFO com.shopapi.revature.dao.EmployeeDAOImpl:29 successfully connected to data base
+2021-05-03 20:57:54  DEBUG com.shopapi.revature.dao.EmployeeDAOImpl:47 add employee details failed
+2021-05-03 20:59:25  INFO com.shopapi.revature.controller.EmployeeApplication:34 user login function stared
+2021-05-03 20:59:45  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-03 20:59:45  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-03 20:59:45  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-03 21:00:21  INFO com.shopapi.revature.controller.EmployeeApplication:34 user login function stared
+2021-05-03 21:00:42  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-03 21:00:42  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-03 21:00:42  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-03 21:00:53  INFO com.shopapi.revature.controller.ManagerApplication:31 user login function stared
+2021-05-03 21:01:00  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:63 validate login invoked!
+2021-05-03 21:01:00  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:67 successfully connected to data base
+2021-05-03 21:01:00  INFO com.shopapi.revature.dao.LoginDetailsDAOImpl:90 validate login completed
+2021-05-03 21:01:44  INFO com.shopapi.revature.dao.UserDAOImpl:43 list user invoked
+2021-05-03 21:01:44  INFO com.shopapi.revature.dao.UserDAOImpl:47 successfully connected to data base
+2021-05-03 21:01:44  INFO com.shopapi.revature.dao.UserDAOImpl:63 list user completed
+2021-05-03 21:01:44  INFO com.shopapi.revature.dao.EmployeeDAOImpl:23 add employee details invoked
+2021-05-03 21:01:44  INFO com.shopapi.revature.dao.EmployeeDAOImpl:28 successfully connected to data base
+2021-05-03 21:01:44  INFO com.shopapi.revature.dao.EmployeeDAOImpl:56 add employee details success
