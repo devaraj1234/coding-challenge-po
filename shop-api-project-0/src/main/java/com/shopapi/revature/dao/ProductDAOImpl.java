@@ -11,8 +11,9 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.shopapi.revature.model.Customer;
 import com.shopapi.revature.model.Product;
-import com.shopapi.revature.model.ProductOwner;
+import com.shopapi.revature.model.Sales;
 import com.shopapi.revature.utility.ConnectionUtility;
 
 public class ProductDAOImpl implements ProductDAO {
@@ -73,14 +74,15 @@ public class ProductDAOImpl implements ProductDAO {
 		log.info("update product to the list invoked");
 		try (Connection conn = ConnectionUtility.getConnection()) {
 			log.info("successfully connected to data base");
-			ps = conn.prepareStatement("UPDATE shopapi.product SET product_name =? , availiable_quantity = ?, product_description = ?,"
-					+ "expected_price_per_unit = ? WHERE product_id = ?");
+			ps = conn.prepareStatement("UPDATE shopapi.product SET product_name = ?, availiable_quantity = ?, product_description = ?, "
+					+ "expected_price_per_unit = ? WHERE product_id = ?;");
 			ps.setString(1, t.getProduct_name());
 			ps.setInt(2, t.getProduct_quantity());
 			ps.setString(3, t.getProduct_description());
 			ps.setDouble(4, t.getexpected_price_per_unit());
 			ps.setInt(5, t.getProduct_id());
 			ps.executeUpdate();
+			
 		} catch (SQLException e) {
 			log.debug("update product to the list failed");
 			e.printStackTrace();
@@ -108,24 +110,24 @@ public class ProductDAOImpl implements ProductDAO {
 	}
 
 	@Override
-	public List<ProductOwner> viewAllProductOwned(ProductOwner owner) {
+	public List<Sales> viewAllProductOwned(Sales owner) {
 		log.info("list all products owned invoked");
-		List<ProductOwner> products = new ArrayList<>();
+		List<Sales> products = new ArrayList<>();
 		try (Connection conn = ConnectionUtility.getConnection()) {
 			log.info("successfully connected to data base");
-			String query = "select * from shopapi.product_owner "
-					+ "join shopapi.product on shopapi.product.product_id = shopapi.product_owner.product_owned "
-					+ "where shopapi.product_owner.product_owner = ?;";
+			String query = "select * from shopapi.sales "
+					+ "join shopapi.product on shopapi.product.product_id = shopapi.sales.product "
+					+ "where shopapi.sales.customer = ?;";
 			ps = conn.prepareStatement(query);
-			ps.setInt(1, owner.getProduct_owner().getCustomer_id());
+			ps.setInt(1, owner.getCustomer().getCustomer_id());
 			rs = ps.executeQuery();
 			while (rs.next()) {
-				ProductOwner product = new ProductOwner();
+				Sales product = new Sales();
 				product.setOrder_no(rs.getInt("order_no"));
-				product.setProduct_owned(new Product(rs.getString("product_name")));
-				product.setOwned_quantity(rs.getInt("owned_quantity"));
-				product.setOwned_date(rs.getDate("product_owned_date"));
-				product.setOwned_status(rs.getString("product_owned_status"));
+				product.setProduct(new Product(rs.getString("product_name")));
+				product.setSales_quantity(rs.getInt("sales_quantity"));
+				product.setSales_date(rs.getDate("sales_date"));
+				product.setSales_status(rs.getString("sales_status"));
 				products.add(product);
 			}
 		} catch (SQLException e) {
@@ -134,6 +136,37 @@ public class ProductDAOImpl implements ProductDAO {
 			return null;
 		}
 		log.info("list all products owned completed");
+		return products;
+	}
+
+	@Override
+	public List<Sales> viewSalesHistory() {
+		log.info("view sales history invoked");
+		List<Sales> products = new ArrayList<>();
+		try (Connection conn = ConnectionUtility.getConnection()) {
+			log.info("successfully connected to data base");
+			String query = "select * from shopapi.sales s "
+					+ "join shopapi.product p on p.product_id = s.product "
+					+ "join shopapi.customers c2 on c2.customer_id = s.customer";
+			ps = conn.prepareStatement(query);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				Sales product = new Sales();
+				product.setOrder_no(rs.getInt("order_no"));
+				product.setCustomer(new Customer(rs.getString("customer_fname"), rs.getString("customer_lname")));
+				product.setProduct(new Product(rs.getString("product_name")));
+				product.setSales_quantity(rs.getInt("sales_quantity"));
+				product.setPrice_Per_Unit(rs.getDouble("price_per_unit"));
+				product.setSales_date(rs.getDate("sales_date"));
+				product.setSales_status(rs.getString("sales_status"));
+				products.add(product);
+			}
+		} catch (SQLException e) {
+			log.debug("view sales history failed");
+			e.printStackTrace(); 
+			return null;
+		}
+		log.info("view sales history completed");
 		return products;
 	}
 

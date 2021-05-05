@@ -8,9 +8,9 @@ import com.shopapi.revature.dao.PaymentDAOImpl;
 import com.shopapi.revature.dao.ProductDAOImpl;
 import com.shopapi.revature.model.AccountCollection;
 import com.shopapi.revature.model.Customer;
-import com.shopapi.revature.model.OfferedMade;
+import com.shopapi.revature.model.Offeres;
 import com.shopapi.revature.model.Product;
-import com.shopapi.revature.model.ProductOwner;
+import com.shopapi.revature.model.Sales;
 
 public class CustomerService {
 
@@ -34,11 +34,11 @@ public class CustomerService {
 		return productDAO.getAll();
 	}
 
-	public boolean offerMadeForProduct(OfferedMade offer) {
+	public boolean offerMadeForProduct(Offeres offer) {
 		return offerDAO.add(offer);
 	}
 	
-	public List<ProductOwner> viewAllProductOwned(ProductOwner owner){
+	public List<Sales> viewAllProductOwned(Sales owner){
 		return productDAO.viewAllProductOwned(owner);
 	}
 	

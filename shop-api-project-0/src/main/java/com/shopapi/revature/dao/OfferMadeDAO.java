@@ -1,10 +1,10 @@
 package com.shopapi.revature.dao;
 
-import com.shopapi.revature.model.OfferedMade;
+import com.shopapi.revature.model.Offeres;
 
-public interface OfferMadeDAO extends GenericDAO<OfferedMade> {
+public interface OfferMadeDAO extends GenericDAO<Offeres> {
 	
-	public boolean acceptOffer(OfferedMade offer);
+	public boolean acceptOffer(Offeres offer);
 	public boolean rejectOffer(int offer_no);
 
 }

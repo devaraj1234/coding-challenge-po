@@ -11,8 +11,7 @@ public class MainSimulator {
 		System.out.println("\nWelcome to XYZ Auction Inc.!!!!!!!!!!!!!!!");
 		loop: while (true) {
 			initialInstructions();
-			if (scan.hasNextLine())
-				;
+			if (scan.hasNextLine());
 			String menu = scan.next();
 			selection: switch (menu) {
 			case "1": {

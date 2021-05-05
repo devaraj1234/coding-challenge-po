@@ -10,9 +10,9 @@ import com.shopapi.revature.Exceptions.InvalidLoginException;
 import com.shopapi.revature.model.AccountCollection;
 import com.shopapi.revature.model.Customer;
 import com.shopapi.revature.model.LoginDetails;
-import com.shopapi.revature.model.OfferedMade;
+import com.shopapi.revature.model.Offeres;
 import com.shopapi.revature.model.Product;
-import com.shopapi.revature.model.ProductOwner;
+import com.shopapi.revature.model.Sales;
 import com.shopapi.revature.model.User;
 import com.shopapi.revature.service.CommonService;
 import com.shopapi.revature.service.CustomerService;
@@ -66,7 +66,7 @@ public class CustomerApplication {
 						int customer_id;
 						customer_id = customerService.getCustomerId(login_id);
 						if (customer_id <= 0) {
-							System.out.println("Please provide customer details:");
+							System.out.println("\nLogin Success!!!!!!!!!!!! Please provide your details:");
 							System.out.println("Enter First Name: ");
 							String fname = scan.next();
 							System.out.println("Enter Last Name: ");
@@ -74,17 +74,18 @@ public class CustomerApplication {
 							System.out.println("Enter Email: ");
 							String email = scan.next();
 							System.out.println("Enter Address: ");
-							String address = scan.next();
+							scan.next();
+							String address = scan.nextLine();
 							System.out.println("Enter Phone: ");
 							int phone = scan.nextInt();
 							System.out.println("Enter SSN: ");
 							int ssn = scan.nextInt();
 
-							boolean addCustomer = customerService.addCustomer(new Customer(null, fname, lname, email,
-									address, phone, ssn, new LoginDetails(login_id, null, null, null)));
+							boolean addCustomer = customerService.addCustomer(new Customer(null, fname, lname, address, email,
+									 phone, ssn, new LoginDetails(login_id, null, null, null)));
 							if (addCustomer == true) {
 								customer_id = customerService.getCustomerId(login_id);
-								System.out.println("Successfully added new customer to data base");
+								System.out.println("\nSuccessfully added new customer to data base");
 							}
 						}
 						if (customer_id > 0) {
@@ -135,12 +136,12 @@ public class CustomerApplication {
 
 												final String ownedStatus = "pending";
 												while (true) {
-													System.out.println("Enter 1 to confirm \n Enter q for Exit");
+													System.out.println("Enter 1 to make offer\nEnter q for Exit");
 													String confirmMenu = scan.next();
 													switch (confirmMenu) {
 													case "1": {
 														customerService.offerMadeForProduct(
-																new OfferedMade(null, new Product(product_id),
+																new Offeres(null, new Product(product_id),
 																		new Customer(customer_id), quantity, date,
 																		offered_price, down_payment, ownedStatus));
 														break offerloop;
@@ -162,17 +163,17 @@ public class CustomerApplication {
 									break customerSelection;
 								}
 								case "2": {
-									List<ProductOwner> productOwner = customerService
-											.viewAllProductOwned(new ProductOwner(null, new Customer(customer_id)));
-									System.out.println("List of products you owned are: ");
+									List<Sales> productOwner = customerService
+											.viewAllProductOwned(new Sales (null, new Customer(customer_id)));
+									System.out.println("\nList of products you owned are: ");
 									System.out.println(
 											"--------------------------------------------------------------------------------------------------------------------------");
-									for (ProductOwner ownedProduct : productOwner) {
+									for (Sales ownedProduct : productOwner) {
 										System.out.println("Order No : " + ownedProduct.getOrder_no()
-												+ "\tProduct Name: " + ownedProduct.getProduct_owned().getProduct_name()
-												+ "\tOwned Quantity: " + ownedProduct.getOwned_quantity()
-												+ "\tOwned Date: " + ownedProduct.getOwned_date() + "\tOwned Status: "
-												+ ownedProduct.getOwned_status());
+												+ "\tProduct Name: " + ownedProduct.getProduct().getProduct_name()
+												+ "\tOwned Quantity: " + ownedProduct.getSales_quantity()
+												+ "\tOwned Date: " + ownedProduct.getSales_date() + "\tOwned Status: "
+												+ ownedProduct.getSales_status());
 									}
 									System.out.println(
 											"--------------------------------------------------------------------------------------------------------------------------");
@@ -180,16 +181,16 @@ public class CustomerApplication {
 								}
 								case "3": {
 									AccountCollection customer = new AccountCollection();
-									customer.setproduct_owner(new ProductOwner(null, new Customer(customer_id)));
+									customer.setSales_order_no(new Sales (null, new Customer(customer_id)));
 									List<AccountCollection> paymentList = customerService.viewAllPaymentList(customer);
-									System.out.println("List of your Payment history: ");
+									System.out.println("\nList of your Payment history: ");
 									System.out.println(
 											"--------------------------------------------------------------------------------------------------------------------------");
 									for (AccountCollection payment : paymentList) {
 										System.out.println(
 												"Payment Id: " + payment.getCollection_id() + "\tProduct Order No: "
-														+ payment.getproduct_owner().getOrder_no() + "\tProduct Name: "
-														+ payment.getproduct_owner().getProduct_owned()
+														+ payment.getSales_order_no().getOrder_no() + "\tProduct Name: "
+														+ payment.getSales_order_no().getProduct()
 																.getProduct_name()
 														+ "\tTotal Price: " + payment.getTotal_price()
 														+ "\tPayment Date: " + payment.getPayment_date()
@@ -208,7 +209,7 @@ public class CustomerApplication {
 									System.out.println(
 											"--------------------------------------------------------------------------------------------------------------------------");
 									System.out.println("Product Order No: "
-											+ remainingPayment.getproduct_owner().getOrder_no() + "\tTotal Price: "
+											+ remainingPayment.getSales_order_no().getOrder_no() + "\tTotal Price: "
 											+ remainingPayment.getTotal_price() + "\tLast Payment Date: "
 											+ remainingPayment.getPayment_date() + "\tLast Payment Made: "
 											+ remainingPayment.getPayment_made() + "\tRemaining Payment: "
@@ -242,7 +243,7 @@ public class CustomerApplication {
 					log.info("user login function failed");
 					e.printStackTrace();
 				}
-				break loop;
+				break selection;
 
 			default:
 				System.out.println("Wrong Input!!!!!!! Try Again");
@@ -253,7 +254,7 @@ public class CustomerApplication {
 			}
 		}
 	}
-
+	
 	public static void initialInstructions() {
 		System.out.println("\nEnter 1 to Create new Login OR Enter 2 for Login..");
 		System.out.println("Enter 'q' for Exit");

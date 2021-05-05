@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import com.shopapi.revature.model.AccountCollection;
 import com.shopapi.revature.model.Customer;
-import com.shopapi.revature.model.ProductOwner;
+import com.shopapi.revature.model.Sales;
 import com.shopapi.revature.service.CustomerService;
 
 public class CustomerServiceTest {
@@ -38,7 +38,7 @@ public class CustomerServiceTest {
 	
 	@Test
 	public void viewAllProductOwnedTest() {
-		assertTrue(customerService.viewAllProductOwned(new ProductOwner(null, new Customer(1))).size()>0);
+		assertTrue(customerService.viewAllProductOwned(new Sales(null, new Customer(1))).size()>0);
 	}
 	
 	@Test(expected=NullPointerException.class)

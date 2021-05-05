@@ -2,31 +2,31 @@ package com.shopapi.revature.model;
 
 import java.util.Date;
 
-public class OfferedMade {
+public class Offeres {
 
 	private Integer offer_no;
 	private Product product;
-	private Customer product_owner;
+	private Customer customer;
 	private int offer_quantity;
 	private Date offer_date;
 	private double offered_price_per_unit;
 	private double payment_made;
 	private String offer_status;
 
-	public OfferedMade(Integer offer_no, Product product) {
+	public Offeres(Integer offer_no, Product product) {
 		this.offer_no = offer_no;
 		this.product = product;
 	}
 
-	public OfferedMade() {
+	public Offeres() {
 	}
 
-	public OfferedMade(Integer offer_no, Product product, Customer product_owner, int offer_quantity, Date offer_date,
+	public Offeres(Integer offer_no, Product product, Customer customer, int offer_quantity, Date offer_date,
 			double offered_price_per_unit, double payment_made, String offer_status) {
 		super();
 		this.offer_no = offer_no;
 		this.product = product;
-		this.product_owner = product_owner;
+		this.customer = customer;
 		this.offer_quantity = offer_quantity;
 		this.offer_date = offer_date;
 		this.offered_price_per_unit = offered_price_per_unit;
@@ -50,12 +50,12 @@ public class OfferedMade {
 		this.product = product;
 	}
 
-	public Customer getProduct_owner() {
-		return product_owner;
+	public Customer getCustomer() {
+		return customer;
 	}
 
-	public void setProduct_owner(Customer product_owner) {
-		this.product_owner = product_owner;
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
 	}
 
 	public int getOffer_quantity() {
@@ -112,7 +112,7 @@ public class OfferedMade {
 		temp = Double.doubleToLongBits(payment_made);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		result = prime * result + ((product == null) ? 0 : product.hashCode());
-		result = prime * result + ((product_owner == null) ? 0 : product_owner.hashCode());
+		result = prime * result + ((customer == null) ? 0 : customer.hashCode());
 		return result;
 	}
 
@@ -124,7 +124,7 @@ public class OfferedMade {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		OfferedMade other = (OfferedMade) obj;
+		Offeres other = (Offeres) obj;
 		if (offer_date == null) {
 			if (other.offer_date != null)
 				return false;
@@ -151,17 +151,17 @@ public class OfferedMade {
 				return false;
 		} else if (!product.equals(other.product))
 			return false;
-		if (product_owner == null) {
-			if (other.product_owner != null)
+		if (customer == null) {
+			if (other.customer != null)
 				return false;
-		} else if (!product_owner.equals(other.product_owner))
+		} else if (!customer.equals(other.customer))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "OfferedMade [offer_no=" + offer_no + ", product=" + product + ", product_owner=" + product_owner
+		return "OfferedMade [offer_no=" + offer_no + ", product=" + product + ", customer=" + customer
 				+ ", offer_quantity=" + offer_quantity + ", offer_date=" + offer_date + ", offered_price_per_unit="
 				+ offered_price_per_unit + ", payment_made=" + payment_made + ", offer_status=" + offer_status + "]";
 	}

@@ -5,7 +5,7 @@ import java.util.Date;
 public class AccountCollection {
 
 	private int collection_id;
-	private ProductOwner product_owner;
+	private Sales sales_order_no;
 	private double offered_price_per_unit;
 	private double total_price;
 	private double payment_made;
@@ -15,11 +15,11 @@ public class AccountCollection {
 	public AccountCollection() {
 	}
 
-	public AccountCollection(int collection_id, ProductOwner product_owner, double offered_price_per_unit,
+	public AccountCollection(int collection_id, Sales sales_order_no, double offered_price_per_unit,
 			double total_price, double payment_made, double remaining_balance, Date payment_date) {
 		super();
 		this.collection_id = collection_id;
-		this.product_owner = product_owner;
+		this.sales_order_no = sales_order_no;
 		this.offered_price_per_unit = offered_price_per_unit;
 		this.total_price = total_price;
 		this.payment_made = payment_made;
@@ -35,12 +35,12 @@ public class AccountCollection {
 		this.collection_id = collection_id;
 	}
 
-	public ProductOwner getproduct_owner() {
-		return product_owner;
+	public Sales getSales_order_no() {
+		return sales_order_no;
 	}
 
-	public void setproduct_owner(ProductOwner product_owner) {
-		this.product_owner = product_owner;
+	public void setSales_order_no(Sales sales_order_no) {
+		this.sales_order_no = sales_order_no;
 	}
 
 	public double getOffered_price_per_unit() {
@@ -91,7 +91,7 @@ public class AccountCollection {
 		long temp;
 		temp = Double.doubleToLongBits(offered_price_per_unit);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
-		result = prime * result + ((product_owner == null) ? 0 : product_owner.hashCode());
+		result = prime * result + ((sales_order_no == null) ? 0 : sales_order_no.hashCode());
 		result = prime * result + ((payment_date == null) ? 0 : payment_date.hashCode());
 		temp = Double.doubleToLongBits(payment_made);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
@@ -115,10 +115,10 @@ public class AccountCollection {
 			return false;
 		if (Double.doubleToLongBits(offered_price_per_unit) != Double.doubleToLongBits(other.offered_price_per_unit))
 			return false;
-		if (product_owner == null) {
-			if (other.product_owner != null)
+		if (sales_order_no == null) {
+			if (other.sales_order_no != null)
 				return false;
-		} else if (!product_owner.equals(other.product_owner))
+		} else if (!sales_order_no.equals(other.sales_order_no))
 			return false;
 		if (payment_date == null) {
 			if (other.payment_date != null)
@@ -136,7 +136,7 @@ public class AccountCollection {
 
 	@Override
 	public String toString() {
-		return "AccountCollection [collection_id=" + collection_id + ", product_owner=" + product_owner
+		return "AccountCollection [collection_id=" + collection_id + ", sales_order_no=" + sales_order_no
 				+ ", offered_price_per_unit=" + offered_price_per_unit + ", total_price=" + total_price
 				+ ", payment_made=" + payment_made + ", remaining_balance=" + remaining_balance + ", payment_date="
 				+ payment_date + "]";

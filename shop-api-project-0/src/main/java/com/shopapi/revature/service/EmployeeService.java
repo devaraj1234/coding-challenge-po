@@ -7,7 +7,7 @@ import com.shopapi.revature.dao.OfferedMadeDAOImpl;
 import com.shopapi.revature.dao.PaymentDAOImpl;
 import com.shopapi.revature.dao.ProductDAOImpl;
 import com.shopapi.revature.model.AccountCollection;
-import com.shopapi.revature.model.OfferedMade;
+import com.shopapi.revature.model.Offeres;
 import com.shopapi.revature.model.Product;
 import com.shopapi.revature.model.WeeklyCollection;
 
@@ -16,7 +16,7 @@ public class EmployeeService {
 	ProductDAOImpl productDAO = new ProductDAOImpl();
 	OfferedMadeDAOImpl offerMadeDAO = new OfferedMadeDAOImpl();
 	PaymentDAOImpl paymentDAO = new PaymentDAOImpl();
-	HashMap<Integer, OfferedMade> receivedOffers;
+	HashMap<Integer, Offeres> receivedOffers;
 
 	public boolean addProductToList(Product product) {
 		return productDAO.add(product);
@@ -30,16 +30,16 @@ public class EmployeeService {
 		return productDAO.delete(product_id);
 	}
 
-	public List<OfferedMade> getAllOfferMade() {
-		List<OfferedMade> offerDetail = offerMadeDAO.getAll();
-		receivedOffers = new HashMap<Integer, OfferedMade>();
-		for (OfferedMade offer : offerDetail) {
+	public List<Offeres> getAllOfferMade() {
+		List<Offeres> offerDetail = offerMadeDAO.getAll();
+		receivedOffers = new HashMap<Integer, Offeres>();
+		for (Offeres offer : offerDetail) {
 			receivedOffers.put(offer.getOffer_no(), offer);
 		}
 		return offerDetail;
 	}
 
-	public boolean acceptOffer(OfferedMade offer) {
+	public boolean acceptOffer(Offeres offer) {
 
 		boolean isOfferAccepted = false;
 
@@ -55,7 +55,7 @@ public class EmployeeService {
 			}
 		}
 
-		for (OfferedMade offerDetail : receivedOffers.values()) {
+		for (Offeres offerDetail : receivedOffers.values()) {
 			if (offerDetail.getProduct().getProduct_id() == offer.getProduct().getProduct_id()) {
 				offered_quantity = offerDetail.getOffer_quantity();
 				offered_price = offerDetail.getOffered_price_per_unit();
@@ -65,13 +65,11 @@ public class EmployeeService {
 		if (offeredProduct.getProduct_quantity() >= offered_quantity
 				&& offered_price >= offeredProduct.getexpected_price_per_unit()) {
 			offerMadeDAO.acceptOffer(offer);
-			int remainingQuantity = (offeredProduct.getProduct_quantity() - offered_quantity);
-			offeredProduct.setProduct_quantity(remainingQuantity);
-			productDAO.update(offeredProduct);
 			isOfferAccepted = true;
-		} else if (offeredProduct.getProduct_quantity() < offered_quantity
-				&& offered_price >= offeredProduct.getexpected_price_per_unit()) {
+		} else if (offeredProduct.getProduct_quantity() > offered_quantity
+				&& offered_price < offeredProduct.getexpected_price_per_unit()) {
 			// TODO
+			System.out.println("\nCan not accept the offer. Offered price per unit is less than expected price");
 		}
 		return isOfferAccepted;
 	}
@@ -79,12 +77,12 @@ public class EmployeeService {
 	public List<AccountCollection> viewAllPaymentMade() {
 		return paymentDAO.viewAllPayment();
 	}
-	
+
 	public boolean rejectOffer(int offer_id) {
 		return offerMadeDAO.rejectOffer(offer_id);
 	}
-	
-	public List<WeeklyCollection> getWeeklyCollection(){
+
+	public List<WeeklyCollection> getWeeklyCollection() {
 		return paymentDAO.getWeeklyCollection();
 	}
 

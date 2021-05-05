@@ -1,5 +1,6 @@
 package com.shopapi.revature.controller;
 
+import java.util.List;
 import java.util.Scanner;
 
 import org.apache.logging.log4j.LogManager;
@@ -8,6 +9,7 @@ import org.apache.logging.log4j.Logger;
 import com.shopapi.revature.Exceptions.InvalidLoginException;
 import com.shopapi.revature.model.Employee;
 import com.shopapi.revature.model.LoginDetails;
+import com.shopapi.revature.model.Sales;
 import com.shopapi.revature.model.User;
 import com.shopapi.revature.service.CommonService;
 import com.shopapi.revature.service.ManagerService;
@@ -61,12 +63,13 @@ public class ManagerApplication {
 								String initialPassword = scan.next();
 								final String emp_role = "employee";
 								int userId = commonService.getUserId(emp_role);
-								
-								boolean addEmployee = managerService.addEmployee(new Employee(null, fname, lname, email, position,
+
+								boolean addEmployee = managerService.addEmployee(new Employee(null, fname, lname, email,
+										position,
 										new LoginDetails(null, loginUser, initialPassword, new User(userId, null))));
-								if(addEmployee == true) {
+								if (addEmployee == true) {
 									System.out.println("successfully added a employee");
-								}else {
+								} else {
 									System.out.println("add employee to database failed");
 								}
 
@@ -76,16 +79,26 @@ public class ManagerApplication {
 								System.out.println("Enter employee id to remove Employee record");
 								int employee_id = scan.nextInt();
 								boolean removeEmployee = managerService.removeEmployee(employee_id);
-								if(removeEmployee == true) {
+								if (removeEmployee == true) {
 									System.out.println("employee record removed successfully");
-								}
-								else {
+								} else {
 									System.out.println("can not removed employee record");
 								}
 
 								break managerSelection;
 							}
 							case "3": {
+
+								List<Sales> salesHistory = managerService.viewSalesHistory();
+								for (Sales sale : salesHistory) {
+									System.out.print("Order No: " + sale.getOrder_no() + "\tSales Date: "
+											+ sale.getSales_date() + "\tProduct: " + sale.getProduct().getProduct_name()
+											+ "\tQuantity: " + sale.getSales_quantity() + "\tPrice Per Unit: "
+											+ sale.getPrice_Per_Unit() + "\tTotal Sale: "
+											+ (sale.getPrice_Per_Unit() * sale.getSales_quantity()) + "\tCustomer: "
+											+ sale.getCustomer().getCustomer_fname() + " "
+											+ sale.getCustomer().getCustomer_lname() + "\n");
+								}
 
 								break managerSelection;
 							}

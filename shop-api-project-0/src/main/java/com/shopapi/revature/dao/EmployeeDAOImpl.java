@@ -67,7 +67,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 			ps.setInt(1, employee_id);
 			ps.executeUpdate();
 		} catch (SQLException e) {
-			log.debug("add employee details failed");
+			log.debug("remove employee details failed");
 			e.printStackTrace();
 			return false;
 		}

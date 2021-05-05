@@ -8,7 +8,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.shopapi.revature.model.AccountCollection;
 import com.shopapi.revature.model.LoginDetails;
-import com.shopapi.revature.model.OfferedMade;
+import com.shopapi.revature.model.Offeres;
 import com.shopapi.revature.model.Product;
 import com.shopapi.revature.model.User;
 import com.shopapi.revature.model.WeeklyCollection;
@@ -45,6 +45,7 @@ public class EmployeeApplication {
 						System.out.println("User: " + login.getLogin_user() + "\t\t\t\tUser_role: "
 								+ login.getUser_role().getUser_role());
 						System.out.println("---------------------------------------------------------------------");
+						System.out.println("\nLogin Success!!!!!!!! Please select the options");
 						employeeloop: while (true) {
 							employeeInstruction();
 							String employeeMenu = scan.next();
@@ -54,6 +55,7 @@ public class EmployeeApplication {
 								scan.nextLine();
 								String product_name = scan.nextLine();
 								System.out.println("Enter product description: ");
+								scan.nextLine();
 								String product_description = scan.nextLine();
 								System.out.println("Enter product quantity: ");
 								int product_quantity = scan.nextInt();
@@ -86,21 +88,24 @@ public class EmployeeApplication {
 								break employeeSelection;
 							}
 							case "4": {
-								List<OfferedMade> offers = employeeService.getAllOfferMade();
+								List<Offeres> offers = employeeService.getAllOfferMade();
 								System.out.println("List for all the offers Received: ");
 								System.out.println("----------------------------------------------------------------");
-								for (OfferedMade offer : offers) {
+								for (Offeres offer : offers) {
 									System.out.println("Offer No: " + offer.getOffer_no() + "\tProduct Id: "
 											+ offer.getProduct().getProduct_id() + "\tProduct Name: "
 											+ offer.getProduct().getProduct_name() + "\tQuantity Availiabe: "
-											+ offer.getProduct().getProduct_quantity() + "\tExpected Price Per Unit: "
-											+ offer.getProduct().getexpected_price_per_unit() + "\tOffered Quantity: "
-											+ offer.getOffer_quantity() + "\tOffered Price per Unit: "
-											+ offer.getOffered_price_per_unit() + "\tPayment Made: "
-											+ offer.getPayment_made() + "\tOffer Status: " + offer.getOffer_status());
+											+ offer.getProduct().getProduct_quantity() + "\tOffered Quantity: "
+											+ offer.getOffer_quantity() + "\tExpected Price Per Unit: "
+											+ offer.getProduct().getexpected_price_per_unit()
+											+ "\tOffered Price per Unit: " + offer.getOffered_price_per_unit()
+											+ "\tPayment Made: " + offer.getPayment_made() + "\tOffer Status: "
+											+ offer.getOffer_status());
 								}
 								System.out.println("----------------------------------------------------------------");
 								offerloop: while (true) {
+									System.out.println(
+											"\nEnter 1 to view offers by product id \nEnter q for Exit \nEnter Here: ");
 									String offerMenu = scan.next();
 									switch (offerMenu) {
 									case "1": {
@@ -109,16 +114,16 @@ public class EmployeeApplication {
 										System.out.println("List of offers for priduct id " + product_id + ":");
 										System.out.println(
 												"----------------------------------------------------------------");
-										for (OfferedMade offer : offers) {
+										for (Offeres offer : offers) {
 											if (offer.getProduct().getProduct_id() == product_id) {
 												System.out.println("Offer No: " + offer.getOffer_no() + "\tProduct Id: "
 														+ offer.getProduct().getProduct_id() + "\tProduct Name: "
 														+ offer.getProduct().getProduct_name()
 														+ "\tQuantity Availiabe: "
 														+ offer.getProduct().getProduct_quantity()
+														+ "\tOffered Quantity: " + offer.getOffer_quantity()
 														+ "\tExpected Price Per Unit: "
 														+ offer.getProduct().getexpected_price_per_unit()
-														+ "\tOffered Quantity: " + offer.getOffer_quantity()
 														+ "\tOffered Price per Unit: "
 														+ offer.getOffered_price_per_unit() + "\tPayment Made: "
 														+ offer.getPayment_made() + "\tOffer Status: "
@@ -134,8 +139,7 @@ public class EmployeeApplication {
 										if (employeeInput.equals("1")) {
 											System.out.println("Enter offer no to accept offer: ");
 											int offer_no = scan.nextInt();
-											employeeService
-													.acceptOffer(new OfferedMade(offer_no, new Product(product_id)));
+											employeeService.acceptOffer(new Offeres(offer_no, new Product(product_id)));
 										} else if (employeeInput.equals("2")) {
 											System.out.println("Enter offer no to accept offer: ");
 											int offer_no = scan.nextInt();
@@ -157,14 +161,13 @@ public class EmployeeApplication {
 										"---------------------------------------------------------------------");
 								for (AccountCollection accountColl : accountCollection) {
 									System.out.println("Collection Id: " + accountColl.getCollection_id()
-											+ "\tProduct Order No: " + accountColl.getproduct_owner().getOrder_no()
+											+ "\tProduct Order No: " + accountColl.getSales_order_no().getOrder_no()
 											+ "\t Customer Name: "
-											+ accountColl.getproduct_owner().getProduct_owner().getCustomer_fname()
-											+ " "
-											+ accountColl.getproduct_owner().getProduct_owner().getCustomer_lname()
+											+ accountColl.getSales_order_no().getCustomer().getCustomer_fname() + " "
+											+ accountColl.getSales_order_no().getCustomer().getCustomer_lname()
 											+ "\t\tTotal Price: " + accountColl.getTotal_price()
-											+ accountColl.getPayment_made() + "\tPayment Date: "
-											+ "\tPayment Received : " + accountColl.getPayment_date()
+											+ "\tPayment Date: " + accountColl.getPayment_date() 
+											+ "\tPayment Received : " + accountColl.getPayment_made()
 											+ "\tRemaining Balance: " + accountColl.getRemaining_balance());
 								}
 								System.out.println(
