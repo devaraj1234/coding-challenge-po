@@ -38,7 +38,7 @@ public class CustomerDAOImpl implements CustomerDAO{
 			e.printStackTrace();
 			return false;
 		}
-		log.info("add customer information failed completed");
+		log.info("add customer information completed");
 		return true;
 	}
 
@@ -80,7 +80,7 @@ public class CustomerDAOImpl implements CustomerDAO{
 				customer.setCustomer_login(new LoginDetails(rs.getInt("customer_login_id"), null, null, null));
 			}
 		} catch (SQLException e) {
-			log.info("get customer by login id failed");
+			log.debug("get customer by login id failed");
 			e.printStackTrace();
 		}
 		log.info("get customer by login id completed");

@@ -17,6 +17,7 @@ public class EmployeeService {
 	OfferedMadeDAOImpl offerMadeDAO = new OfferedMadeDAOImpl();
 	PaymentDAOImpl paymentDAO = new PaymentDAOImpl();
 	HashMap<Integer, Offeres> receivedOffers;
+	
 
 	public boolean addProductToList(Product product) {
 		return productDAO.add(product);
@@ -49,27 +50,31 @@ public class EmployeeService {
 		Product offeredProduct = null;
 
 		List<Product> products = productDAO.getAll();
+		
 		for (Product product : products) {
 			if (product.getProduct_id() == offer.getProduct().getProduct_id()) {
-				offeredProduct = product;
-			}
+				offeredProduct = product;			}
 		}
-
+		
 		for (Offeres offerDetail : receivedOffers.values()) {
 			if (offerDetail.getProduct().getProduct_id() == offer.getProduct().getProduct_id()) {
 				offered_quantity = offerDetail.getOffer_quantity();
 				offered_price = offerDetail.getOffered_price_per_unit();
 			}
 		}
-
+		
 		if (offeredProduct.getProduct_quantity() >= offered_quantity
+				
 				&& offered_price >= offeredProduct.getexpected_price_per_unit()) {
-			offerMadeDAO.acceptOffer(offer);
+			
+				offerMadeDAO.acceptOffer(offer);
+			
 			isOfferAccepted = true;
-		} else if (offeredProduct.getProduct_quantity() > offered_quantity
-				&& offered_price < offeredProduct.getexpected_price_per_unit()) {
+		} 
+		
+		else if (offeredProduct.getProduct_quantity() < offered_quantity
+				&& offered_price >= offeredProduct.getexpected_price_per_unit()) {
 			// TODO
-			System.out.println("\nCan not accept the offer. Offered price per unit is less than expected price");
 		}
 		return isOfferAccepted;
 	}

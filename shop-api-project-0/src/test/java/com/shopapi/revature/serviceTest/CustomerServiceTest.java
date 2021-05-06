@@ -16,8 +16,8 @@ public class CustomerServiceTest {
 	
 	@Test
 	public void getCustomerIdTest() {
-		int expected_id = 1;
-		int actual_id = customerService.getCustomerId(4);
+		int expected_id = 2;
+		int actual_id = customerService.getCustomerId(3);
 		assertEquals(expected_id, actual_id);
 	}
 	

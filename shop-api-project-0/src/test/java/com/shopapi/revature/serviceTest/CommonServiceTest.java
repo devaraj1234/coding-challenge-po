@@ -31,9 +31,4 @@ public class CommonServiceTest {
 			assertEquals(expected_result, actual_result);
 		}
 		
-		@Test
-		public void getLoginDetailsTest() {
-			assertTrue(commonService.getLoginDetails() instanceof LoginDetails);
-			
-		}
 }

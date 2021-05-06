@@ -83,7 +83,7 @@ public class LoginDetailsDAOImpl implements LoginDetailsDAO {
 				}
 			}
 		} catch (SQLException e) {
-			log.info("validate login failed!");
+			log.debug("validate login failed!");
 			e.printStackTrace();
 			return false;
 		}

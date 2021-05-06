@@ -82,17 +82,17 @@ public class PaymentDAOImpl implements PaymentDAO {
 				paymentList.add(payment);
 			}
 		} catch (SQLException e) {
-			log.debug("view all paymnent status invoked");
+			log.debug("view all paymnent status failed");
 			e.printStackTrace();
 			return null;
 		}
-		log.info("view all paymnent status invoked");
+		log.info("view all paymnent status completed");
 		return paymentList;
 	}
 
 	@Override
 	public AccountCollection viewRemainingPayment(int order_no) {
-		log.info("view remaining payment by order no");
+		log.info("view remaining payment by order no invoked");
 		AccountCollection payment = new AccountCollection();
 		try (Connection conn = ConnectionUtility.getConnection()) {
 			log.info("successfully connected to data base");
