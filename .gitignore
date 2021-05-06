@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ##############################
 ## Java
 ##############################
@@ -12,16 +13,93 @@ hs_err_pid*
 ##############################
 ## Maven
 ##############################
+=======
+# Created by https://www.toptal.com/developers/gitignore/api/eclipse,maven
+# Edit at https://www.toptal.com/developers/gitignore?templates=eclipse,maven
+
+### Eclipse ###
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+.classpath
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
+
+# CDT-specific (C/C++ Development Tooling)
+.cproject
+
+# CDT- autotools
+.autotools
+
+# Java annotation processor (APT)
+.factorypath
+
+# PDT-specific (PHP Development Tools)
+.buildpath
+
+# sbteclipse plugin
+.target
+
+# Tern plugin
+.tern-project
+
+# TeXlipse plugin
+.texlipse
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Code Recommenders
+.recommenders/
+
+# Annotation Processing
+.apt_generated/
+.apt_generated_test/
+
+# Scala IDE specific (Scala & Java development for Eclipse)
+.cache-main
+.scala_dependencies
+.worksheet
+
+# Uncomment this line if you wish to ignore the project description file.
+# Typically, this file would be tracked if it contains build/dependency configurations:
+.project
+
+### Eclipse Patch ###
+# Spring Boot Tooling
+.sts4-cache/
+
+### Maven ###
+>>>>>>> 5745fe6149b6824c50a0dd4ec2cca018bfd75679
 target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
 pom.xml.next
+<<<<<<< HEAD
 pom.xml.bak
+=======
+>>>>>>> 5745fe6149b6824c50a0dd4ec2cca018bfd75679
 release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
+<<<<<<< HEAD
 .mvn/wrapper/maven-wrapper.jar
 
 ##############################
@@ -82,3 +160,19 @@ nb-configuration.xml
 ## OS X
 ##############################
 .DS_Store
+=======
+# https://github.com/takari/maven-wrapper#usage-without-binary-jar
+.mvn/wrapper/maven-wrapper.jar
+.flattened-pom.xml
+
+# End of https://www.toptal.com/developers/gitignore/api/eclipse,maven
+
+#Mac
+.DS_Store
+/.recommenders/
+
+~.mv.db
+~.trace.db
+
+.vscode
+>>>>>>> 5745fe6149b6824c50a0dd4ec2cca018bfd75679
