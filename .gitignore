@@ -1,7 +1,7 @@
-main
-notes
-basics-java
-.metadata
+main/
+notes/
+basics-java/
+.metadata/
 /.metadata/
 ##############################
 ## Java
