@@ -4,7 +4,7 @@ Java-Basics/
 .metadata/
 /.metadata/
 Servers/
-aws_keypair
+*.pem
 Java Notes
 ##############################
 ## Java
