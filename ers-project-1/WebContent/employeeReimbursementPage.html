@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee Reimbursement page</title>
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+	<link rel="stylesheet" type="text/css" href="static/style/employee-reimbursment-page.css">
+
+</head>
+<body action=employee-reimbursment-page>
+	<div id = "container">
+		<div id="header"></div>
+		<div id=mainpage>
+			<form id = "form">
+				<button id = "logout" class="logout"><a href="index.html">Logout</a></button>
+				<h4 id="instruction">Select Reimbursement service</h4><br> 
+				<button id="selection-btn" class="new-request">Submit New Request </button>
+				<button id="selection-btn" class="pending-request">Penidng Request</button>
+				<button id="selection-btn" class="resolved-request">Resolved Request</button>
+				<button id="selection-btn" class="all-request">All Request</button>
+			</form>
+		</div>
+		<div id="footer"></div>
+	</div>
+	<script>
+		$("#header").load("static/header.html");
+		$("#footer").load("static/footer.html");
+	</script>
+</body>
+</html>

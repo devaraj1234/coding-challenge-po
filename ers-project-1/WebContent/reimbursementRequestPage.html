@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee Main page</title>
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+	<link rel="stylesheet" type="text/css" href="static/style/reimbursement-request-page.css">
+
+</head>
+<body action=reimbursement-request-page>
+	<div id = "container">
+		<div id="header"></div>
+		<div id= request-body>
+			<button id = "logout" class="logout"><a href="index.html">Logout</a></button>
+			<form id = "form" class = "form">
+				<h4 id="instruction">Please Fill out the request</h4><br>
+				
+				<label id = "labelname" for="expense-date">Expense Date :</label> 
+				<input type="date" id="date" class="date" placeholder="Date"><br><br>
+				
+				<label id = "labelname" for="expense-type">Expense Type :</label> 
+				<select id="selection">
+					<option value="empty"></option>
+					<option value="lodging">Lodging</option>
+					<option value="travel">Travel</option>
+					<option value="food">Food</option>
+					<option value="other">Other</option>
+				</select><br><br>
+
+				<label id="labelname" for="upload-receipt">Upload Receipt :</label>
+				<input type="file" id="myfile" name="myfile" placeholder="file path"><br><br>
+
+				<label id="labelname" for="description">Description:</label><br>
+				<textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+
+				<button id="submit-btn" class="submit-btn">Submit</button>
+			</form>
+		</div>
+		<div id="footer"></div>
+	</div>
+	<script>
+		$("#header").load("static/header.html");
+		$("#footer").load("static/footer.html");
+	</script>
+</body>
+</html>
