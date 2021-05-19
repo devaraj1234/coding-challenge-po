@@ -25,6 +25,10 @@ public class User {
 		this.user_role_id = user_role_id;
 	}
 
+	public User(Integer user_id) {
+		this.user_id = user_id;
+	}
+
 	public Integer getUser_id() {
 		return user_id;
 	}

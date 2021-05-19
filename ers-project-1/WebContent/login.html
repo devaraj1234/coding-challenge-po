@@ -21,7 +21,7 @@
 			<label id="labelname">Password:</label> 
 			<input type="password" id="password" name="password" placeholder="Password" required><br><br> 
 			
-			<input type="submit" id="login-btn" value="Login" /><br><br>
+			<input type="submit" id="login-btn" onclick="getSession()" value="Login" /><br><br>
 			
 			<h6 id = "warning"></h6>
 		</form>
@@ -33,11 +33,19 @@
 		$("#footer").load("static/footer.html");
 
 		function getSession(){
-			var username= session.getAttribute("username");
-			if(username == null){
-				document.getElementById("warning").innerHTML = userSession+"Invalid Login Credentials!!! Try Again";
-			}
-		}
+			var user = Session.getSession("user");
+			var message = document.getElementById("warning");
+			
+			console.log(user);
+			if(username == null) {
+            message.textContent = "Invalid Username or Password!! Try Again";
+            message.style.color = "red";
+        	} 
+        	else {
+            message.textContent = "Login Success";
+            message.style.color = "green";
+        	}
+		}		
 	</script>
 </body>
 </html>

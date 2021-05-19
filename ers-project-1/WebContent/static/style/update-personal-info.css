@@ -10,43 +10,47 @@
 
 }
 
-#form{
+#update-form{
 	vertical-align: top;
 	display: inline-block;
-	margin: auto;
+	background-color: #f2f2f2;
+	height: 300px;
+	width: absolute;
+	margin: 50px 15px 0px 425px;
+	border: 2px solid #1aa3ff;
 }
 
 #logout{
-	align-self: left;
 	height: 30px;
 	width: relative;
   	border: 2px solid #002e4d;
-  	margin-left: 92%;
   	margin-top: 5px;
   	font-weight: bold;
 }
 
-#instruction{
-	margin: 75px 0px 0px 450px;
-	font-style: italic;
-	font-weight: bold;
-	font-color: #002e4d;
-	font-size: 30px;	
-}
-
-#selection-btn{
-	margin: 10px 0px 25px 75px;
-	height: 100px;
-	width: 175px;
+#submit-btn{
+	margin: 10px 50px 0px 100px;
+	height: 50px;
+	width: 75px;
 	font-style: italic;
 	font-color: #002e4d;
 	font-weight: bold;
 	border: 2px solid #002e4d;
-
 }
 
-#selection-btn:hover {
-  -ms-transform: scale(1.5);
-  -webkit-transform: scale(1.5);
-  transform: scale(1.5); 
+#labelname{
+	margin: 15px 0px 0px 15px;
+	font-style: italic;
+	font-weight: bold;
+	color: #002e4d;
+}
+
+#instruction{
+	margin: 10px 0px 0px 40px;
+	font-style: italic;
+	color: #002e4d;
+}
+
+#email{
+	margin: 0px 0px 0px 25px;
 }

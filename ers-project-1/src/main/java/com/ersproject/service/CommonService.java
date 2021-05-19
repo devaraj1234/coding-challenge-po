@@ -1,12 +1,12 @@
 package com.ersproject.service;
 
-import com.ersproject.dao.EmployeeDAO;
-import com.ersproject.dao.EmployeeDAOImpl;
+import com.ersproject.dao.UserDAO;
+import com.ersproject.dao.UserDAOImpl;
 import com.ersproject.model.User;
 
 public class CommonService {
 	
-	EmployeeDAO edao = new EmployeeDAOImpl();
+	UserDAO edao = new UserDAOImpl();
 	
 	public boolean validateLogin(String usernmae, String password) {
 		return edao.validateLogin(usernmae, password);

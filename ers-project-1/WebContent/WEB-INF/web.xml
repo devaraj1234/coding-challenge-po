@@ -5,40 +5,5 @@
 
 	<display-name>Employee Reimbursement System</display-name>
 
-	<servlet>
-		<servlet-name>LoginServlet</servlet-name>
-		<servlet-class>com.ersproject.controllers.LoginServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>EmoplyeeMainPageServlet</servlet-name>
-		<servlet-class>com.ersproject.controllers.EmoplyeeMainPageServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>EmployeeReimbursementServelet</servlet-name>
-		<servlet-class>com.ersproject.controllers.EmployeeReimbursementServelet</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>RequestReimbursementServlet</servlet-name>
-		<servlet-class>com.ersproject.controllers.RequestReimbursementServlet</servlet-class>
-	</servlet>
-
-	
-	
-	<servlet-mapping>
-		<servlet-name>LoginServlet</servlet-name>
-		<url-pattern>/login</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>EmoplyeeMainPageServlet</servlet-name>
-		<url-pattern>/employeeMainPage</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>EmployeeReimbursementServelet</servlet-name>
-		<url-pattern>/employee-reimbursement-page</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>RequestReimbursementServlet</servlet-name>
-		<url-pattern>/reimbursement-request-page</url-pattern>
-	</servlet-mapping>
 
 </web-app>

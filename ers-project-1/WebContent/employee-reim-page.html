@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Employee Reimbursement page</title>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="./static/style/employee-reimbursment-page.css">
+
+</head>
+<body>
+	<div id="container">
+		<div id="header"></div>
+		<div id=mainpage>
+			<form id="form" action=employee-reim-page>
+				<input type="submit" id="logout"  name="selection-type" value="Log Out" />
+				<h4 id="instruction">Select Reimbursement service</h4>
+				<input type="submit" class="selection-btn" id="new-request" name="selection-type" value="Submit New Request" />
+				<input type="submit" class="selection-btn" id="pending-request" name="selection-type" value="Pending Request" />
+				<input type="submit" class="selection-btn" id="resolved-request" name="selection-type" value="Resolved Request" />
+				<input type="submit" class="selection-btn" id="all-request" name="selection-type" value="All Request" />
+			</form>
+			<table id = "table" border="1"></table>
+		</div>
+		<div id="footer"></div>
+	</div>
+	
+	<script>
+		$("#header").load("static/header.html");
+		$("#footer").load("static/footer.html");
+		
+		var all_request = document.getElementById('all-request');
+		all_request.addEventListener("click", getData);
+			function getData(){
+				console.log("Helllllllllllllllllllllllllllllllllllo")
+
+				let xhr = new XMLHttpRequest();
+				let url = "http://localhost:8085/ers-project-1/employee-reim-page*"
+				xhr.open("GET", url);
+				xhr.send();
+				xhr.onreadystatechange  = function(){
+					if(this.readyState == 4 && this.status == 200){
+						let data = xhr.responseText;
+						console.log("Helllllllllllllllllllllllllllllllllllo")
+						console.log(data);
+						populateData(data);
+					}
+				}
+			}
+/*
+			var array_list = []
+			$.ajax({
+				method: 'GET',
+				url: '/employee-reim-page',
+				//url: 'https://reqres.in/api/users',
+				success:function(response){
+					array_list = response.data
+					console.log(array_list)
+					populateData(array_list)
+				}
+			})}*/
+
+		function populateData(data){
+			let table = document.getElementById('table');
+			table.innerHTML += `
+			<thead><tr><td>Reimbursement Id</td> <td>Submit Date</td> <td>Amount</td> <td>Reimbursement Type</td> <th>Reimbursement Status </td><td>Description</td></tr></thead><tbody>
+			`
+			for(var i=0; i<5;i++){
+				table.innerHTML += `
+				<tbody>
+					<tr><td>${data[i].first_name}</td><td>${data[i].last_name}</td><td>${data[i].email}</td><td>${i+3}</td><td>${i+4}</td></tr>
+				</tbody>
+				`
+			}
+		}
+				
+	</script>
+</body>
+</html>
