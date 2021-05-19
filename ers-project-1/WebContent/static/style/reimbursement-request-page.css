@@ -14,18 +14,16 @@
 	vertical-align: top;
 	display: inline-block;
 	background-color: #f2f2f2;
-	height: 375px;
+	height: 475px;
 	width: absolute;
-	margin: 10px 50px 0px 425px;
+	margin: 20px 15px 0px 425px;
 	border: 2px solid #1aa3ff;
 }
 
-.logout{
-	align-self: left;
+#logout{
 	height: 30px;
 	width: relative;
   	border: 2px solid #002e4d;
-  	margin-left: 94%;
   	margin-top: 5px;
   	font-weight: bold;
 }
@@ -60,6 +58,12 @@
 }
 
 #selection{
+	margin: 10px 0px 0px 5px;
+	height: 20px;
+	border: 2px solid #002e4d;
+}
+
+#expense-amount{
 	margin: 10px 0px 0px 5px;
 	height: 20px;
 	border: 2px solid #002e4d;

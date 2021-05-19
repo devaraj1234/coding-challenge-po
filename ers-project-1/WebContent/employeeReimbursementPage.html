@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Employee Reimbursement page</title>
-	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-	<link rel="stylesheet" type="text/css" href="static/style/employee-reimbursment-page.css">
+<title>Employee Reimbursement page</title>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="static/style/employee-reimbursment-page.css">
 
 </head>
-<body action=employee-reimbursment-page>
-	<div id = "container">
+<body>
+	<div id="container">
 		<div id="header"></div>
 		<div id=mainpage>
-			<form id = "form">
-				<button id = "logout" class="logout"><a href="index.html">Logout</a></button>
-				<h4 id="instruction">Select Reimbursement service</h4><br> 
-				<button id="selection-btn" class="new-request">Submit New Request </button>
-				<button id="selection-btn" class="pending-request">Penidng Request</button>
-				<button id="selection-btn" class="resolved-request">Resolved Request</button>
-				<button id="selection-btn" class="all-request">All Request</button>
+			<form id="form" action=employee-reimbursement-page method="post">
+				<input type="submit" id="logout"  name="selection-type" value="Log Out" />
+				<h4 id="instruction">Select Reimbursement service</h4>
+				<input type="submit" id="selection-btn"  name="selection-type" value="Submit New Request" />
+				<input type="submit" id="selection-btn"  name="selection-type" value="Penidng Request" />
+				<input type="submit" id="selection-btn"  name="selection-type" value="Resolved Request" />
+				<input type="submit" id="selection-btn"  name="selection-type" value="All Request" />
 			</form>
 		</div>
 		<div id="footer"></div>

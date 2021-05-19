@@ -6,25 +6,25 @@
 	<link rel="stylesheet" type="text/css" href="static/style/employee-main-page.css">
 
 </head>
-<body action=employee-home-page>
+<body>
 	<div id = "container">
 		<div id="header"></div>
 		<div id=mainpage>
-			<form id = "form">
-				<button id = "logout" class="logout"><a href="index.html">Logout</a></button>
+			<form action="employeeMainPage" method = "post" id = "form">
 				<h4 id="instruction">Please select the service</h4><br>
-				<button id="selection-btn" class="pay-voucher">Personal Information</button>
-				<button id="selection-btn" class="pay-voucher">Pay Voucher</button>
-				<button id="selection-btn" class="time sheet">Time Sheet</button>
-				<button id="selection-btn" class="reimbursment">Employee Reimbursement</button>
-				<button id="selection-btn" class="develop-you">Develop You</button>
+				<input type="submit" id="selection-btn"  name="selection-type" value="Personal Information" />
+				<input type="submit" id="selection-btn"  name="selection-type" value="Pay Voucher" />
+				<input type="submit" id="selection-btn"  name="selection-type" value="Employee Reimbursement" />
+				<input type="submit" id="selection-btn"  name="selection-type" value="Time Sheet" />
+				<input type="submit" id="selection-btn"  name="selection-type" value="Develop You" />
 			</form>
 		</div>
 		<div id="footer"></div>
 	</div>
-	<script>
+	
+	<script type="text/javascript">
 		$("#header").load("static/header.html");
 		$("#footer").load("static/footer.html");
-	</script>
+    </script>
 </body>
 </html>
