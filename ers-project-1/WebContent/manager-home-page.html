@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Employee Reimbursement page</title>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="./static/style/mangager-home-page.css">
+
+</head>
+<body>
+	<div id="container">
+		<div id="header"></div>
+		<div id=mainpage>
+			<form id="form" action=manager-home-page>
+				<input type="submit" id="logout"  name="selection-type" value="Log Out" />
+				<h4 id="instruction"></h4>
+				<input type="submit" class="selection-btn" id="employee-information" name="selection-type" value="Employee Information" />
+				<input type="submit" class="selection-btn" id="reimbursement-request" name="selection-type" value="Reimbursement Request" />
+			</form>
+			<table id = "table" border="1"></table>
+		</div>
+		<div id="footer"></div>
+	</div>
+	<script type="text/javascript">
+		$("#header").load("static/header.html");
+		$("#footer").load("static/footer.html");
+	</script>
+</body>
+</html>

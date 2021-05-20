@@ -4,7 +4,7 @@
 <title>Employee Reimbursement page</title>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <link rel="stylesheet" type="text/css"
-	href="./static/style/employee-reimbursment-page.css">
+	href="./static/style/employee-reimb-page.css">
 
 </head>
 <body>
@@ -13,13 +13,15 @@
 		<div id=mainpage>
 			<form id="form" action=employee-reim-page>
 				<input type="submit" id="logout"  name="selection-type" value="Log Out" />
-				<h4 id="instruction">Select Reimbursement service</h4>
+				<h5 id="instruction">Select Reimbursement service</h5>
 				<input type="submit" class="selection-btn" id="new-request" name="selection-type" value="Submit New Request" />
 				<input type="submit" class="selection-btn" id="pending-request" name="selection-type" value="Pending Request" />
 				<input type="submit" class="selection-btn" id="resolved-request" name="selection-type" value="Resolved Request" />
 				<input type="submit" class="selection-btn" id="all-request" name="selection-type" value="All Request" />
 			</form>
-			<table id = "table" border="1"></table>
+			<table id = "table" border="1">
+				<h5 id = "table-info"></h5>
+			</table>
 		</div>
 		<div id="footer"></div>
 	</div>
@@ -27,52 +29,74 @@
 	<script>
 		$("#header").load("static/header.html");
 		$("#footer").load("static/footer.html");
-		
-		var all_request = document.getElementById('all-request');
-		all_request.addEventListener("click", getData);
-			function getData(){
-				console.log("Helllllllllllllllllllllllllllllllllllo")
 
-				let xhr = new XMLHttpRequest();
-				let url = "http://localhost:8085/ers-project-1/employee-reim-page*"
-				xhr.open("GET", url);
-				xhr.send();
-				xhr.onreadystatechange  = function(){
-					if(this.readyState == 4 && this.status == 200){
-						let data = xhr.responseText;
-						console.log("Helllllllllllllllllllllllllllllllllllo")
-						console.log(data);
-						populateData(data);
-					}
-				}
-			}
-/*
-			var array_list = []
-			$.ajax({
-				method: 'GET',
-				url: '/employee-reim-page',
-				//url: 'https://reqres.in/api/users',
-				success:function(response){
-					array_list = response.data
-					console.log(array_list)
-					populateData(array_list)
-				}
-			})}*/
+		document.getElementById('all-request').addEventListener("click", getAllReimList);
+		document.getElementById('resolved-request').addEventListener("click", getResolvedList);
 
-		function populateData(data){
-			let table = document.getElementById('table');
-			table.innerHTML += `
-			<thead><tr><td>Reimbursement Id</td> <td>Submit Date</td> <td>Amount</td> <td>Reimbursement Type</td> <th>Reimbursement Status </td><td>Description</td></tr></thead><tbody>
-			`
-			for(var i=0; i<5;i++){
-				table.innerHTML += `
-				<tbody>
-					<tr><td>${data[i].first_name}</td><td>${data[i].last_name}</td><td>${data[i].email}</td><td>${i+3}</td><td>${i+4}</td></tr>
-				</tbody>
-				`
+		function getAllReimList(event){
+			event.preventDefault();
+			let xhr = new XMLHttpRequest();
+			let url = "http://localhost:8085/ers-project-1/employee-reim-page?selection-type=All+Request"
+			xhr.open("GET", url);
+			xhr.send();
+			xhr.onreadystatechange  = function(){
+				if(this.readyState == 4 && this.status == 200){
+					let response = xhr.responseText;
+					response = JSON.parse(response)
+					populateData(response);
+				}
 			}
 		}
-				
+
+		function populateData(resoinse){
+			let table = document.getElementById('table');
+			if(response != null){
+				table.innerHTML = `
+					<thead style="text-align:center; font-weight: bold;"><tr><td style = "min-width: 100px;">Request Id</td> <td style = "min-width: 100px;">Submit Date</td> <td style = "min-width: 100px;">Amount</td> <td>	Reimbursement Type</td> <th>Reimbursement Status </td><td style = "width : 250px;">Description</td></tr></thead><tbody>
+						`
+				for(var i=0; i<response.length;i++){
+					table.innerHTML += `
+						<tbody style="text-align:center;">
+						<tr><td>${response[i].reimb_id}</td><td>${response[i].reimb_submitted}</td><td>${response[i].reimb_amount}</td><td>${response[i].reimb_type_id.reimb_type}</td><td>${response[i].reimb_status_id.reimb_status}</td><td>${response[i].reimb_description}</td></tr>
+						</tbody>
+						`
+					}
+			response = null;
+			}
+		}	
+	
+
+		function getResolvedList(event){
+			event.preventDefault();
+			let xhr1 = new XMLHttpRequest();
+			let url1 = "http://localhost:8085/ers-project-1/employee-reim-page?selection-type=Resolved+Request"
+			xhr1.open("GET", url1);
+			xhr1.send();
+			xhr1.onreadystatechange  = function(){
+				if(this.readyState == 4 && this.status == 200){
+					let response1 = xhr1.responseText;
+					response1 = JSON.parse(response1)
+					populateData(response1);
+				}
+			}
+		}
+
+		function populateData(response1){
+			let table = document.getElementById('table');
+			if(response1 != null){
+				table.innerHTML = `
+					<thead style="text-align:center; font-weight: bold;"><tr><td style = "min-width: 100px;">Request Id</td> <td style = "min-width: 100px;">Submit Date</td> <td style = "min-width: 100px;">Amount</td> <td>	Reimbursement Type</td> <th>Reimbursement Status </td><td style = "width : 250px;">Description</td></tr></thead><tbody>
+						`
+				for(var i=0; i<response1.length;i++){
+					table.innerHTML += `
+						<tbody style="text-align:center;">
+						<tr><td>${response1[i].reimb_id}</td><td>${response1[i].reimb_submitted}</td><td>${response1[i].reimb_amount}</td><td>${response1[i].reimb_type_id.reimb_type}</td><td>${response1[i].reimb_status_id.reimb_status}</td><td>${response1[i].reimb_description}</td></tr>
+						</tbody>
+						`
+					}
+			response = null;
+			}
+		}
 	</script>
 </body>
 </html>

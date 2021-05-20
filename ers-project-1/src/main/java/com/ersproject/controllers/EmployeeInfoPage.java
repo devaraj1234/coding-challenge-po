@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 import com.ersproject.model.User;
 import com.ersproject.service.EmployeeService;
 import com.ersproject.utility.ServletUtility;
+import com.google.gson.Gson;
 
 @WebServlet("/employee-info-page")
 public class EmployeeInfoPage extends HttpServlet {
@@ -22,14 +23,18 @@ public class EmployeeInfoPage extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		response.setContentType("text/html");
+
 		String serviceSelection = request.getParameter("selection-type");
 		if (serviceSelection.equals("Update Information")) {
 			response.sendRedirect("update-personal-info.html");
 		}
 
 		else if (serviceSelection.equals("Personal Information")) {
-			response.sendRedirect("employee-info-page.html");
+			HttpSession session = request.getSession(false);
+			User user = (User) session.getAttribute("user");
+			response.setContentType("application/json");
+			response.setCharacterEncoding("UTF-8");
+			new Gson().toJson(user, response.getWriter());
 		}
 	}
 
@@ -46,7 +51,6 @@ public class EmployeeInfoPage extends HttpServlet {
 		User updated_user = servletUtil.getUpdatedUser(new_first_name, new_last_name, new_email, user);
 
 		if(empService.updateUserInformation(updated_user)) {
-			System.out.println("Successfully Updated");
 			request.getRequestDispatcher("employee-info-page.html").forward(request, response);
 		}else {
 			System.out.println("can not update the value");

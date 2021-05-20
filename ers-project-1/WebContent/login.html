@@ -31,21 +31,6 @@
 	<script type="text/javascript">
 		$("#header").load("static/header.html");
 		$("#footer").load("static/footer.html");
-
-		function getSession(){
-			var user = Session.getSession("user");
-			var message = document.getElementById("warning");
-			
-			console.log(user);
-			if(username == null) {
-            message.textContent = "Invalid Username or Password!! Try Again";
-            message.style.color = "red";
-        	} 
-        	else {
-            message.textContent = "Login Success";
-            message.style.color = "green";
-        	}
-		}		
 	</script>
 </body>
 </html>
