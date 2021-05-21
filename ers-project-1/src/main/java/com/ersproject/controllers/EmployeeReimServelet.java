@@ -88,27 +88,35 @@ public class EmployeeReimServelet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
+		String selection_type = request.getParameter("submit/cancel");
+		if (selection_type.equalsIgnoreCase("Submit")) {
 
-		try {
-			Date reim_date = servletUtility.convertStringToDate(request.getParameter("reim_date"));
-			String reim_type = request.getParameter("reim_type");
-			Double reim_amount = servletUtility.convertStringToDouble(request.getParameter("reim-amount"));
-			String reim_description = request.getParameter("reim_description");
-			// TODO upload image
-			HttpSession session = request.getSession(false);
-			User user = (User) session.getAttribute("user");
-			if (!reim_date.equals(null) && !reim_type.equals(null) && !reim_amount.equals(null)) {
-				boolean isUpdated = empService.submitNewReimbursementRequest(reim_date, reim_type, reim_amount,
-						reim_description, user);
-				if (isUpdated == true) {
-					// TODO Write success message to browser
-					request.getRequestDispatcher("employee-reim-page.html").forward(request, response);
-				} else {
-					// TODO write failed message to broswer
+			try {
+				Date reim_date = servletUtility.convertStringToDate(request.getParameter("reim_date"));
+				String reim_type = request.getParameter("reim_type");
+				Double reim_amount = servletUtility.convertStringToDouble(request.getParameter("reim-amount"));
+				String reim_description = request.getParameter("reim_description");
+				// TODO upload image
+				HttpSession session = request.getSession(false);
+				User user = (User) session.getAttribute("user");
+				if (!reim_date.equals(null) && !reim_type.equals(null) && !reim_amount.equals(null)) {
+					boolean isUpdated = empService.submitNewReimbursementRequest(reim_date, reim_type, reim_amount,
+							reim_description, user);
+					if (isUpdated == true) {
+						// TODO Write success message to browser
+						request.getRequestDispatcher("employee-reim-page.html").forward(request, response);
+					} else {
+						// TODO write failed message to broswer
+						request.getRequestDispatcher("employee-reim-page.html").forward(request, response);
+					}
 				}
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
-		} catch (Exception e) {
-			e.printStackTrace();
+
+		} else if (selection_type.equalsIgnoreCase("Cancel")) {
+			request.getRequestDispatcher("employee-reim-page.html").forward(request, response);
+
 		}
 
 	}

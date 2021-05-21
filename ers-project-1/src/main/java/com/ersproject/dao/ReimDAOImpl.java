@@ -52,7 +52,7 @@ public class ReimDAOImpl implements ReimDAO {
 		List<Reimbursement> reimbursmentList = new ArrayList<>();
 		try (Connection conn = ConnectionUtilityAWS.getConnection()) {
 			String query = "select * from ers_db.ers_reimbursement r "
-					+ "join ers_db.ers_reimbursement_status rs on rs.reimb_status_id = r.reimb_type_id "
+					+ "join ers_db.ers_reimbursement_status rs on rs.reimb_status_id = r.reimb_status_id "
 					+ "join ers_db.ers_reimbursement_type et on et.reimb_type_id = r.reimb_type_id "
 					+ "WHERE r.reimb_author = ?;";
 			PreparedStatement ps = conn.prepareStatement(query);
@@ -67,7 +67,6 @@ public class ReimDAOImpl implements ReimDAO {
 				reim.setReimb_description(rs.getString("reimb_description"));
 				reim.setReimb_receipt(rs.getBlob("reimb_receipt"));
 				reim.setReimb_type_id(new ReimbursementType(rs.getInt("reimb_type_id"), rs.getString("reimb_type")));
-//				reim.setReimb_author(new User());
 				reim.setReimb_status_id(
 						new ReimbursementStatus(rs.getInt("reimb_status_id"), rs.getString("reimb_status")));
 				reimbursmentList.add(reim);

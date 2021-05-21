@@ -1,35 +1,15 @@
-#mainpage{
-	width: 96%; 
-	min-height: 460px;
-	background-color: #cceeff;
-	margin: auto;
-	vertical-align: top;
-	display: block;
-	border-top: 1px solid #002e4d;
-	border-bottom: 1px solid #002e4d;
-
-}
-
-#update-form{
+#update-container{
 	vertical-align: top;
 	display: inline-block;
 	background-color: #f2f2f2;
 	height: 300px;
 	width: absolute;
-	margin: 50px 15px 0px 425px;
+	margin: 50px 15px 0px 250px;
 	border: 2px solid #1aa3ff;
 }
 
-#logout{
-	height: 30px;
-	width: relative;
-  	border: 2px solid #002e4d;
-  	margin-top: 5px;
-  	font-weight: bold;
-}
-
 #submit-btn{
-	margin: 10px 50px 0px 100px;
+	margin: 10px 10px 0px 100px;
 	height: 50px;
 	width: 75px;
 	font-style: italic;
@@ -45,10 +25,11 @@
 	color: #002e4d;
 }
 
-#instruction{
-	margin: 10px 0px 0px 40px;
+#update-instruction{
+	margin: 50px 0px 0px 40px;
 	font-style: italic;
 	color: #002e4d;
+	font-size: 15px;
 }
 
 #email{

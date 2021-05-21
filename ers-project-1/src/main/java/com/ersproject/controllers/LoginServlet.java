@@ -36,6 +36,7 @@ public class LoginServlet extends HttpServlet {
 		
 		if(!username.equals(null) && !password.equals(null)) {
 			boolean validateLogin = commonService.validateLogin(username, password);
+			
 			if(validateLogin == true) {
 				
 				user = commonService.getUser(username, password);

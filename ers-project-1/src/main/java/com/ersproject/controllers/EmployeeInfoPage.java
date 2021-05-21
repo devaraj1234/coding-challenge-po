@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.ersproject.model.User;
+import com.ersproject.service.CommonService;
 import com.ersproject.service.EmployeeService;
 import com.ersproject.utility.ServletUtility;
 import com.google.gson.Gson;
@@ -20,21 +21,18 @@ public class EmployeeInfoPage extends HttpServlet {
 
 	ServletUtility servletUtil = new ServletUtility();
 	EmployeeService empService = new EmployeeService();
+	CommonService commonService = new CommonService();
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
 		String serviceSelection = request.getParameter("selection-type");
-		if (serviceSelection.equals("Update Information")) {
-			response.sendRedirect("update-personal-info.html");
-		}
-
-		else if (serviceSelection.equals("Personal Information")) {
+		if (serviceSelection.equals("View Information")) {
 			HttpSession session = request.getSession(false);
-			User user = (User) session.getAttribute("user");
+			User sessionUser = (User) session.getAttribute("user");
+			User user = commonService.getUser(sessionUser.getUser_name(), sessionUser.getUser_password());
 			response.setContentType("application/json");
 			response.setCharacterEncoding("UTF-8");
-			new Gson().toJson(user, response.getWriter());
+			response.getWriter().write(new Gson().toJson(user));
 		}
 	}
 
@@ -50,10 +48,9 @@ public class EmployeeInfoPage extends HttpServlet {
 
 		User updated_user = servletUtil.getUpdatedUser(new_first_name, new_last_name, new_email, user);
 
-		if(empService.updateUserInformation(updated_user)) {
+		if (empService.updateUserInformation(updated_user)) {
 			request.getRequestDispatcher("employee-info-page.html").forward(request, response);
-		}else {
-			System.out.println("can not update the value");
+		} else {
 			request.getRequestDispatcher("employee-info-page.html").forward(request, response);
 		}
 

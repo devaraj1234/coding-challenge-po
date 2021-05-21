@@ -17,8 +17,9 @@ public class EmoplyeeHomePageServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 	    response.setContentType("text/html");  
-		String serviceSelection = request.getParameter("selection-type");
-		System.out.println(serviceSelection);
+		
+	    String serviceSelection = request.getParameter("selection-type");
+		
 		if (serviceSelection.equals("Emp Reimbursement")) {
 			response.sendRedirect("employee-reim-page.html");
 		}

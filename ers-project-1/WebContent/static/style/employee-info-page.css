@@ -1,19 +1,18 @@
-#mainpage{
+#container{
 	width: 96%; 
 	min-height: 460px;
 	background-color: #cceeff;
 	margin: auto;
-	vertical-align: top;
 	display: block;
 	border-top: 1px solid #002e4d;
 	border-bottom: 1px solid #002e4d;
-
 }
 
-#form{
+#display{
 	vertical-align: top;
 	display: inline-block;
-	margin: auto;
+    min-height: 460px;
+    margin: auto;
 }
 
 #logout{
@@ -26,26 +25,24 @@
 }
 
 #instruction{
-	margin: 20px 0px 0px 450px;
+	margin: 25px 15px 0px 55px;
 	font-style: italic;
 	font-weight: bold;
-	font-color: #002e4d;
-	font-size: 30px;	
+	font-size: 25px;	
 }
 
-#selection-btn{
-	margin: 5px 0px 0px 300px;
-	height: 80px;
+.selection-btn {
+	margin: 10px 0px 25px 50px;
+	height: 100px;
 	width: 150px;
 	font-style: italic;
-	font-color: #002e4d;
 	font-weight: bold;
 	border: 2px solid #002e4d;
-
 }
 
-#selection-btn:hover {
-  -ms-transform: scale(1.5);
-  -webkit-transform: scale(1.5);
-  transform: scale(1.5); 
+.selection-btn:hover {
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1); 
 }
+

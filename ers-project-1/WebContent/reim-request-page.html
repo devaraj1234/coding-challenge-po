@@ -8,21 +8,19 @@
 
 </head>
 <body>
-	<div id="container">
-		<div id="header"></div>
+	<div id="req-container">
 		<div id=request-body>
-			<input type="submit" id="logout"  name="selection-type" value="Log Out" />
-			<form action="reim-request-page" id="form" class="form" method="post">
-				<h4 id="instruction">Please Fill out the request</h4><br> 
+			<form action="employee-reim-page" id="req-form" class="form" method="post">
+				<h4 id="request-instruction">Please Fill out the request</h4><br> 
 				
-				<label id="labelname" for="expense-date">Expense Date :</label> 
+				<label id="labelname" for="expense-date" required>Expense Date :</label> 
 				<input type="date" id="date" name="reim_date" placeholder="Date"><br><br> 
 				
-				<label id="labelname" for="expense-amount">Expense Amount :</label> 
+				<label id="labelname" for="expense-amount" required>Expense Amount :</label> 
 				<input type="number" min="0.00" id="expense-amount" name="reim-amount" placeholder="Amount"><br><br> 
 				
-				<label id="labelname" for="expense-type">Expense Type :</label> 
-				<select id="selection" name="reim_type">
+				<label id="labelname" for="expense-type" required>Expense Type :</label> 
+				<select id="request-selection" name="reim_type">
 					<option value="empty"></option>
 					<option value="lodging">Lodging</option>
 					<option value="travel">Travel</option>
@@ -36,16 +34,11 @@
 				<label id="labelname" for="description">Description:</label><br>
 				<textarea id="description" name="reim_description" rows="4" cols="50"></textarea><br><br>
 				
-				<input type="submit" id="submit-btn"  name="submit" value="Submit" />
+				<input type="submit" id="update-btn" name="submit/cancel" value="Submit" />
+   				<input type="submit" id="cancel-btn" name="submit/cancel" value="Cancel" />			
 				
 			</form>
 		</div>
-		<div id="footer"></div>
 	</div>
-
-	<script>
-		$("#header").load("static/header.html");
-		$("#footer").load("static/footer.html");
-	</script>
 </body>
 </html>
