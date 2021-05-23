@@ -2,7 +2,6 @@ package com.ersproject.utility;
 
 import java.sql.Date;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 
 import com.ersproject.model.User;
 import com.ersproject.model.UserRoles;
@@ -14,9 +13,8 @@ public class ServletUtility {
 	}
 
 	public Date convertStringToDate(String stringDate) throws ParseException {
-		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-		long long_date = format.parse(stringDate).getTime();
-		return new java.sql.Date(long_date);
+		Date date=Date.valueOf(stringDate);
+		return date;
 	}
 
 	public User getUpdatedUser(String new_first_name, String new_last_name, String new_email, User user) {

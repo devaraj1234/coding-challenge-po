@@ -99,7 +99,8 @@ public class UserDAOImpl implements UserDAO {
 		log.info("view personal information invoked");
 		List<User> users = new ArrayList<>();
 		try (Connection conn = ConnectionUtilityAWS.getConnection()) {
-			String query = "SELECT * FROM ers_db.ers_users";
+			String query = "SELECT * FROM ers_db.ers_users u join ers_db.ers_user_roles er "
+					+ "ON er.ers_user_role_id = u.user_role_id;";
 			PreparedStatement ps = conn.prepareStatement(query);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
@@ -121,4 +122,6 @@ public class UserDAOImpl implements UserDAO {
 		log.info("list all users completed");
 		return users;
 	}
+	
+
 }

@@ -1,5 +1,6 @@
 package com.ersproject.dao;
 
+import java.sql.Date;
 import java.util.List;
 
 import com.ersproject.model.Reimbursement;
@@ -12,11 +13,13 @@ public interface ReimDAO {
 
 	public int getReimbursementTypeId(String reim_type);
 
-	public boolean approveReimbursement(int author_id);
+	public boolean approveReimbursement(int request_id, String action, Date resolvedDate, int resolverId);
 
-	public boolean rejectReimbursement(int author_id);
+	public boolean rejectReimbursement(int request_id, String action, Date resolvedDate, int resolverId);
 
-	public Reimbursement viewIndividualReimbursement(String first_name, String last_name);
+	public List<Reimbursement> viewIndividualReimRequest(String first_name);
 
-	public List<Reimbursement> viewAllReimbursementRequest();
+	public List<Reimbursement> allReimbursementRequest();
+	
+	public List<Reimbursement> getResolvedReimbursement();
 }
