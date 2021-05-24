@@ -443,3 +443,61 @@
 2021-05-23 10:21:05  INFO com.ersproject.dao.ReimDAOImpl:85 get reimbursement type id invoked
 2021-05-23 10:21:06  INFO com.ersproject.dao.ReimDAOImpl:28 submit reimbursement request method invoked
 2021-05-23 10:21:06  INFO com.ersproject.dao.ReimDAOImpl:46 submit reimbursement request method completed
+2021-05-23 10:35:28  INFO com.ersproject.dao.UserDAOImpl:23 validate login invoked!
+2021-05-23 10:35:29  INFO com.ersproject.dao.UserDAOImpl:42 validate login completed
+2021-05-23 12:47:02  INFO com.ersproject.dao.ReimDAOImpl:28 submit reimbursement request method invoked
+2021-05-23 12:48:06  INFO com.ersproject.dao.ReimDAOImpl:28 submit reimbursement request method invoked
+2021-05-23 20:20:15  INFO com.ersproject.dao.UserDAOImpl:23 validate login invoked!
+2021-05-23 20:20:16  INFO com.ersproject.dao.UserDAOImpl:42 validate login completed
+2021-05-23 20:20:16  INFO com.ersproject.dao.UserDAOImpl:48 view personal information invoked
+2021-05-23 20:20:16  INFO com.ersproject.dao.UserDAOImpl:71 view personal information completed
+2021-05-23 20:20:33  INFO com.ersproject.dao.UserDAOImpl:48 view personal information invoked
+2021-05-23 20:20:33  INFO com.ersproject.dao.UserDAOImpl:71 view personal information completed
+2021-05-23 20:20:43  INFO com.ersproject.dao.UserDAOImpl:77 update personal information invoked
+2021-05-23 20:20:44  INFO com.ersproject.dao.UserDAOImpl:93 update personal information completed
+2021-05-23 20:20:46  INFO com.ersproject.dao.UserDAOImpl:48 view personal information invoked
+2021-05-23 20:20:46  INFO com.ersproject.dao.UserDAOImpl:71 view personal information completed
+2021-05-23 20:20:57  INFO com.ersproject.dao.UserDAOImpl:77 update personal information invoked
+2021-05-23 20:20:57  INFO com.ersproject.dao.UserDAOImpl:93 update personal information completed
+2021-05-23 20:21:27  INFO com.ersproject.dao.UserDAOImpl:23 validate login invoked!
+2021-05-23 20:21:28  INFO com.ersproject.dao.UserDAOImpl:42 validate login completed
+2021-05-23 20:21:28  INFO com.ersproject.dao.UserDAOImpl:48 view personal information invoked
+2021-05-23 20:21:29  INFO com.ersproject.dao.UserDAOImpl:71 view personal information completed
+2021-05-23 20:21:34  INFO com.ersproject.dao.ReimDAOImpl:52 view reimbursement recored invoked
+2021-05-23 20:21:34  INFO com.ersproject.dao.ReimDAOImpl:79 view reimbursement recored completed
+2021-05-23 20:21:38  INFO com.ersproject.dao.ReimDAOImpl:52 view reimbursement recored invoked
+2021-05-23 20:21:39  INFO com.ersproject.dao.ReimDAOImpl:79 view reimbursement recored completed
+2021-05-23 20:21:41  INFO com.ersproject.dao.ReimDAOImpl:52 view reimbursement recored invoked
+2021-05-23 20:21:41  INFO com.ersproject.dao.ReimDAOImpl:79 view reimbursement recored completed
+2021-05-23 20:21:44  INFO com.ersproject.dao.ReimDAOImpl:52 view reimbursement recored invoked
+2021-05-23 20:21:45  INFO com.ersproject.dao.ReimDAOImpl:79 view reimbursement recored completed
+2021-05-23 20:21:48  INFO com.ersproject.dao.ReimDAOImpl:52 view reimbursement recored invoked
+2021-05-23 20:21:48  INFO com.ersproject.dao.ReimDAOImpl:79 view reimbursement recored completed
+2021-05-23 20:21:49  INFO com.ersproject.dao.ReimDAOImpl:52 view reimbursement recored invoked
+2021-05-23 20:21:50  INFO com.ersproject.dao.ReimDAOImpl:79 view reimbursement recored completed
+2021-05-23 20:22:17  INFO com.ersproject.dao.ReimDAOImpl:85 get reimbursement type id invoked
+2021-05-23 20:22:17  INFO com.ersproject.dao.ReimDAOImpl:28 submit reimbursement request method invoked
+2021-05-23 20:22:18  INFO com.ersproject.dao.ReimDAOImpl:46 submit reimbursement request method completed
+2021-05-23 20:22:20  INFO com.ersproject.dao.ReimDAOImpl:52 view reimbursement recored invoked
+2021-05-23 20:22:20  INFO com.ersproject.dao.ReimDAOImpl:79 view reimbursement recored completed
+2021-05-23 20:22:50  INFO com.ersproject.dao.ReimDAOImpl:85 get reimbursement type id invoked
+2021-05-23 20:22:50  INFO com.ersproject.dao.ReimDAOImpl:28 submit reimbursement request method invoked
+2021-05-23 20:22:51  INFO com.ersproject.dao.ReimDAOImpl:46 submit reimbursement request method completed
+2021-05-23 20:23:03  INFO com.ersproject.dao.UserDAOImpl:23 validate login invoked!
+2021-05-23 20:23:03  INFO com.ersproject.dao.UserDAOImpl:42 validate login completed
+2021-05-23 20:23:03  INFO com.ersproject.dao.UserDAOImpl:48 view personal information invoked
+2021-05-23 20:23:03  INFO com.ersproject.dao.UserDAOImpl:71 view personal information completed
+2021-05-23 20:23:06  INFO com.ersproject.dao.UserDAOImpl:99 view personal information invoked
+2021-05-23 20:23:06  INFO com.ersproject.dao.UserDAOImpl:122 list all users completed
+2021-05-23 20:23:15  INFO com.ersproject.dao.ReimDAOImpl:189 view reimbursement recored invoked
+2021-05-23 20:23:15  INFO com.ersproject.dao.ReimDAOImpl:223 view reimbursement recored completed
+2021-05-23 20:23:26  INFO com.ersproject.dao.ReimDAOImpl:229 view reimbursement recored invoked
+2021-05-23 20:23:26  INFO com.ersproject.dao.ReimDAOImpl:260 view reimbursement recored completed
+2021-05-23 20:23:42  INFO com.ersproject.dao.ReimDAOImpl:127 reject reimbursement method invoked
+2021-05-23 20:23:43  INFO com.ersproject.dao.ReimDAOImpl:143 reject reimbursement method completed
+2021-05-23 20:23:45  INFO com.ersproject.dao.ReimDAOImpl:229 view reimbursement recored invoked
+2021-05-23 20:23:46  INFO com.ersproject.dao.ReimDAOImpl:260 view reimbursement recored completed
+2021-05-23 20:23:49  INFO com.ersproject.dao.ReimDAOImpl:189 view reimbursement recored invoked
+2021-05-23 20:23:50  INFO com.ersproject.dao.ReimDAOImpl:223 view reimbursement recored completed
+2021-05-23 20:24:03  INFO com.ersproject.dao.ReimDAOImpl:149 view individual reimbursement recored invoked
+2021-05-23 20:24:03  INFO com.ersproject.dao.ReimDAOImpl:182 view individual reimbursement recored completed

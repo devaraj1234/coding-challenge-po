@@ -1,7 +1,6 @@
 package com.ersproject.service;
 
 import java.sql.Date;
-import java.text.ParseException;
 import java.util.List;
 
 import com.ersproject.dao.ReimDAO;
@@ -18,7 +17,7 @@ public class EmployeeService {
 	ReimDAO reimDao = new ReimDAOImpl();
 
 	public boolean submitNewReimbursementRequest(Date expense_date, String reim_type, double expense_amount,
-			String reim_des, User user) throws ParseException {
+			String reim_des, User user) {
 
 		Reimbursement reim_request = null;
 		int reim_type_id = reimDao.getReimbursementTypeId(reim_type);
