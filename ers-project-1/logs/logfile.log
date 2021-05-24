@@ -505,3 +505,11 @@
 2021-05-23 20:44:49  INFO com.ersproject.dao.UserDAOImpl:42 validate login completed
 2021-05-23 20:44:49  INFO com.ersproject.dao.UserDAOImpl:48 view personal information invoked
 2021-05-23 20:44:50  INFO com.ersproject.dao.UserDAOImpl:71 view personal information completed
+2021-05-24 12:51:07  INFO com.ersproject.dao.UserDAOImpl:23 validate login invoked!
+2021-05-24 12:51:08  INFO com.ersproject.dao.UserDAOImpl:42 validate login completed
+2021-05-24 12:51:08  INFO com.ersproject.dao.UserDAOImpl:48 view personal information invoked
+2021-05-24 12:51:09  INFO com.ersproject.dao.UserDAOImpl:71 view personal information completed
+2021-05-24 12:51:22  INFO com.ersproject.dao.UserDAOImpl:23 validate login invoked!
+2021-05-24 12:51:23  INFO com.ersproject.dao.UserDAOImpl:42 validate login completed
+2021-05-24 12:51:28  INFO com.ersproject.dao.UserDAOImpl:23 validate login invoked!
+2021-05-24 12:51:28  INFO com.ersproject.dao.UserDAOImpl:42 validate login completed

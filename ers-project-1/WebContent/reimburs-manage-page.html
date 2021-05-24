@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Reimburse Manage Page</title>
+<title>Reimbursement Manage Page</title>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <link rel="stylesheet" type="text/css"
 	href="./static/style/reimburse-manage-page.css">
@@ -71,7 +71,7 @@
 			let table = document.getElementById('resolved-table');
 			if(response != null){
 				table.innerHTML = `
-					<thead style="text-align:center; font-weight: bold;"><tr><td>Request Id</td><td>Employee Name</td><td>Amount</td><td>Reimb. Type</td><td>Request Date</td><td>Reimb. Status</td><td>Resolved By</td><td>Resolved Date</td>
+					<thead style="text-align:center; font-weight: bold;"><tr><td>Request Id</td><td>Employee Name</td><td>Amount</td><td>Reimb. Type</td><td>Expense Date</td><td>Reimb. Status</td><td>Resolved By</td><td>Resolved Date</td>
 						`
 				for(var i=0; i<response.length;i++){
 					table.innerHTML += `
@@ -105,7 +105,7 @@
 			let table = document.getElementById('resolved-table');
 			if(response2 != null){
 				table.innerHTML = `
-					<thead style="text-align:center; font-weight: bold;"><tr><td>Request Id</td><td>Employee Name</td><td>Amount</td><td>Reimb. Type</td><td>Request Date</td><td>Reimb. Status</td><td>Action</td><td>Confirm</td>
+					<thead style="text-align:center; font-weight: bold;"><tr><td>Request Id</td><td>Employee Name</td><td>Amount</td><td>Reimb. Type</td><td>Expense Date</td><td>Reimb. Status</td><td>Action</td><td>Confirm</td>
 						`
 				for(var i=0; i<response2.length;i++){
 					table.innerHTML += `
@@ -159,7 +159,7 @@
 			let table = document.getElementById('resolved-table');
 			if(searchResult != null){
 				table.innerHTML = `
-					<thead style="text-align:center; font-weight: bold;"><tr><td>Request Id</td><td>Employee Name</td><td>Amount</td><td>Reimb. Type</td><td>Request Date</td><td>Reimb. Status</td><td>Resolved Date</td>
+					<thead style="text-align:center; font-weight: bold;"><tr><td>Request Id</td><td>Employee Name</td><td>Amount</td><td>Reimb. Type</td><td>Expense Date</td><td>Reimb. Status</td><td>Resolved Date</td>
 						`
 				for(var i=0; i<searchResult.length;i++){
 					table.innerHTML += `

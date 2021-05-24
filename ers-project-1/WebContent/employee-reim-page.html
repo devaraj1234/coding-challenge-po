@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Employee Reimbursement page</title>
+<title>Expense Reimbursement page</title>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <link rel="stylesheet" type="text/css"
 	href="./static/style/employee-reimb-page.css">
@@ -65,7 +65,7 @@
 			let table = document.getElementById('table');
 			if(response != null){
 				table.innerHTML = `
-					<thead style="text-align:center; font-weight: bold;"><tr><td style = "min-width: 100px;">Request Id</td> <td style = "min-width: 100px;">Submit Date</td> <td style = "min-width: 100px;">Amount</td> <td>	Reim. Type</td> <th>Reim. Status </td><td style = "width : 250px;">Description</td></tr></thead><tbody>
+					<thead style="text-align:center; font-weight: bold;"><tr><td style = "min-width: 100px;">Request Id</td> <td style = "min-width: 100px;">Expense Date</td> <td style = "min-width: 100px;">Amount</td> <td>	Reim. Type</td> <th>Reim. Status </td><td style = "width : 250px;">Description</td></tr></thead><tbody>
 						`
 				for(var i=0; i<response.length;i++){
 					table.innerHTML += `
@@ -98,7 +98,7 @@
 			let table = document.getElementById('table');
 			if(response1 != null){
 				table.innerHTML = `
-					<thead style="text-align:center; font-weight: bold;"><tr><td style = "min-width: 100px;">Request Id</td> <td style = "min-width: 100px;">Submit Date</td> <td style = "min-width: 100px;">Amount</td> <td>	Reim. Type</td> <th>Reim. Status </td><td style = "width : 250px;">Description</td></tr></thead><tbody>
+					<thead style="text-align:center; font-weight: bold;"><tr><td style = "min-width: 100px;">Request Id</td> <td style = "min-width: 100px;">Expense Date</td> <td style = "min-width: 100px;">Amount</td> <td>	Reim. Type</td> <th>Reim. Status </td><td style = "width : 250px;">Description</td></tr></thead><tbody>
 						`
 				for(var i=0; i<response1.length;i++){
 					table.innerHTML += `
@@ -129,7 +129,7 @@
 			let table = document.getElementById('table');
 			if(response2 != null){
 				table.innerHTML = `
-					<thead style="text-align:center; font-weight: bold;"><tr><td style = "min-width: 100px;">Request Id</td> <td style = "min-width: 100px;">Submit Date</td> <td style = "min-width: 100px;">Amount</td> <td>	Reim. Type</td> <th>Reim. Status </td><td style = "width : 250px;">Description</td></tr></thead><tbody>
+					<thead style="text-align:center; font-weight: bold;"><tr><td style = "min-width: 100px;">Request Id</td> <td style = "min-width: 100px;">Expense Date</td> <td style = "min-width: 100px;">Amount</td> <td>	Reim. Type</td> <th>Reim. Status </td><td style = "width : 250px;">Description</td></tr></thead><tbody>
 						`
 				for(var i=0; i<response2.length;i++){
 					table.innerHTML += `
