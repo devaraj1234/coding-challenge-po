@@ -501,3 +501,7 @@
 2021-05-23 20:23:50  INFO com.ersproject.dao.ReimDAOImpl:223 view reimbursement recored completed
 2021-05-23 20:24:03  INFO com.ersproject.dao.ReimDAOImpl:149 view individual reimbursement recored invoked
 2021-05-23 20:24:03  INFO com.ersproject.dao.ReimDAOImpl:182 view individual reimbursement recored completed
+2021-05-23 20:44:48  INFO com.ersproject.dao.UserDAOImpl:23 validate login invoked!
+2021-05-23 20:44:49  INFO com.ersproject.dao.UserDAOImpl:42 validate login completed
+2021-05-23 20:44:49  INFO com.ersproject.dao.UserDAOImpl:48 view personal information invoked
+2021-05-23 20:44:50  INFO com.ersproject.dao.UserDAOImpl:71 view personal information completed
