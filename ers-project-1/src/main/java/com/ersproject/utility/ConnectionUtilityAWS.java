@@ -28,5 +28,4 @@ public class ConnectionUtilityAWS {
 		}
 		return conn;
 	}
-
 }

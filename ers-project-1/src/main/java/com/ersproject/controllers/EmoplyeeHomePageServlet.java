@@ -20,7 +20,7 @@ public class EmoplyeeHomePageServlet extends HttpServlet {
 		
 	    String serviceSelection = request.getParameter("selection-type");
 		
-		if (serviceSelection.equals("Emp Reimbursement")) {
+		if (serviceSelection.equals("Exp Reimbursement")) {
 			response.sendRedirect("employee-reim-page.html");
 		}
 
