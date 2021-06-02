@@ -10,7 +10,7 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
 
 #### After cloning the project unzip the folder, set up database and import ers-project-1 to integrated development environment Eclipse/Intellij/Visual Studio ####
 #### To set up DataBase ####
-- copy the pgpostgresql script from devaraj-acharya/Project-1 ERS DB/ERSDB_script.sql and create schema and tables in postgresql DB
+- copy the postgresql script from devaraj-acharya/Project-1 ERS DB/ERSDB_script.sql and create schema and tables in postgresql DB
 #### To set up project in Eclipse ####
 - File => Open Projects from File System => Directory 
 - choose the location for the project ers-project-1
