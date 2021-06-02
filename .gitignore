@@ -1,7 +1,7 @@
 ServletDemo/
 notes/
 Java-Basics/
-basics-Java/
+basics*/
 canoe-travel-app/
 learn-spring/
 .metadata/
@@ -9,6 +9,7 @@ learn-spring/
 Servers*/
 *.pem
 *.doc
+Java*
 aws_keypair
 ##############################
 ## Java
