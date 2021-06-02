@@ -44,3 +44,13 @@ create table ers_db.ers_reimbursement(
 	constraint ers_reimbursment_status_fk foreign key (reimb_status_id) references ers_db.ers_reimbursement_status(reimb_status_id) on delete cascade,
 	constraint ers_reimbursment_type_fk foreign key (reimb_type_id) references ers_db.ers_reimbursement_type(reimb_type_id) on delete cascade
 	);
+	
+	
+insert into ers_db.ers_user_roles (default, 'manager');
+insert into ers_db.ers_user_roles (default, 'employee');
+
+-- for user login
+insert into ers_db.ers_users values (default, 'testsuser', 'password', 'testuser', 'testuser', 'testuser@user', 2);
+
+-- for employee/manager login
+insert into ers_db.ers_users values (default, 'testemployee', 'password', 'testemployee', 'testemployee', 'testuser@employee', 1);
