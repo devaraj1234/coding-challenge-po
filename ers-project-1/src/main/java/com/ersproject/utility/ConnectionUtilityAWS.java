@@ -17,11 +17,11 @@ public class ConnectionUtilityAWS {
 			}
 		      
 		String dbName = "postgres";
-		String RDS_HOSTNAME = "ersdatabase.crfu47uosrzt.us-east-2.rds.amazonaws.com";
+		String RDS_HOSTNAME = System.getenv("AWSDB_HOSTNAME");
 		String RDS_USERNAME = "postgres";
-		String password = System.getenv("AWSDB_PASSWORD");
+		String RDS_PASSWORD = System.getenv("AWSDB_PASSWORD");
 		String jdbcUrl = "jdbc:postgresql://" + RDS_HOSTNAME + ":" + 5432 + "/" +dbName 
-				+"?user=" + RDS_USERNAME + "&password=" + password;
+				+"?user=" + RDS_USERNAME + "&password=" + RDS_PASSWORD;
 
 		if (conn == null || conn.isClosed()) {
 			conn = DriverManager.getConnection(jdbcUrl);
